@@ -4,8 +4,8 @@ class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: 'Enter email *',
-      password: 'Enter password *',
+      email: '',
+      password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -31,11 +31,13 @@ class Signin extends React.Component {
         <input
           type="text"
           value={this.state.email}
+          placeholder="Enter email *"          
           onChange={this.handleInput('email')}>
         </input>
         <input
           type="password"
           value={this.state.password}
+          placeholder="Enter password *"          
           onChange={this.handleInput('password')}>
         </input>
         <button onClick={this.handleSubmit}>Sign In</button>

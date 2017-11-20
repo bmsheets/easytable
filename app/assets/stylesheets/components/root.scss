@@ -1,0 +1,33 @@
+// Place all the styles related to the root controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: $font-stack;
+  background: $light-gray;
+}
+
+div {
+  padding: 20px;
+  background: white;
+}
+
+button {
+  background: $red;
+  color: white;
+  padding: 10px;
+}
+
+button:hover {
+  background: $red-hover;
+  
+}
+
+input {
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 24px;
+}
