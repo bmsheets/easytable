@@ -4,11 +4,11 @@ class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
+      firstName: 'First Name *',
+      lastName: 'Last Name *',
+      email: 'Enter email *',
+      password: 'Enter password *',
+      confirmPassword: 'Re-enter password *',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
