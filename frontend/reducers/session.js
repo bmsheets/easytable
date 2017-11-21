@@ -7,7 +7,7 @@ export default (state = defaultState, action) => {
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       const user = action.user;
-      return Object.assign({}, { user });
+      return Object.assign({}, { currentUser: user });
     case LOGOUT_CURRENT_USER:
       return defaultState;
     default:

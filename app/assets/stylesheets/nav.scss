@@ -1,0 +1,57 @@
+.bar {
+  display: block;
+}
+
+.nav-bar {
+}
+
+.utility-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 28px;
+  padding: 0 36px;
+}
+
+.main-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 54px; 
+  padding: 0 36px;
+}
+
+.button {
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 7px 16px;
+  height: 32;
+  cursor: pointer;
+  line-height: 2rem;
+}
+
+.signup-button {
+  color: white;
+  background-color: $blue;
+  transition: background-color 300ms ease-out;
+}
+
+.signup-button:hover {
+  background-color: $blue-hover;
+}
+
+.user-dropdown {
+
+}
+
+.logo-links > a {
+  margin: 10px;
+}
+
+.utility-links > a {
+  color: #717171;
+  font-size: 13px;
+  margin: 10px;
+}

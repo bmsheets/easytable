@@ -1,3 +1,10 @@
 // Place all the styles related to the root controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: $font-stack;
+  background: $light-gray;
+  margin: auto;
+  max-width: 1600px;
+}

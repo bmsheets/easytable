@@ -1,11 +1,10 @@
 import React from 'react';
+import NavBarContainer from './nav/nav_bar_container';
 import SignupContainer from './session/signup_container';
 import SigninContainer from './session/signin_container';
 
 export default() => (
   <div>
-    <h1>React is working.</h1>
-    <SignupContainer />
-    <SigninContainer />
+    <NavBarContainer />
   </div>
 );
