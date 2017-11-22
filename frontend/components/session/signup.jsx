@@ -29,8 +29,8 @@ class Signup extends React.Component {
   render() {
     return (
     <div className="signup">
-      <h1>Signup Component</h1>
       <form className="signup-form">
+        <h1>Welcome to EasyTable!</h1>
         <input
           type="text"
           value={this.state.firstName}

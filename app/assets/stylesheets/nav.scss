@@ -3,6 +3,7 @@
 }
 
 .nav-bar {
+  
 }
 
 .utility-bar {
@@ -24,9 +25,8 @@
 
 .button {
   font-size: 14px;
-  border: 1px solid black;
   border-radius: 3px;
-  padding: 7px 16px;
+  padding: 0px 16px;
   height: 32;
   cursor: pointer;
   line-height: 2rem;
@@ -54,4 +54,18 @@
   color: #717171;
   font-size: 13px;
   margin: 10px;
+}
+
+.modal {
+  margin: auto;
+  max-width: 428px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
