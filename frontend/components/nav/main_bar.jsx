@@ -16,7 +16,7 @@ export default ({ currentUser }) => {
   return (
     <div className="bar main-bar">
       <div className="logo-links">
-        <a>Logo Here</a>
+        <a>EasyTable</a>
         <a>Choose your location</a>
       </div>
       { authFeature }
