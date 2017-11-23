@@ -23,7 +23,6 @@ class Signup extends React.Component {
     e.preventDefault();
     this.props.createUser(this.state).then(
       () => {
-        console.log("closing modal after user creation");
         this.props.closeModal();
       }
     );
