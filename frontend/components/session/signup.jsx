@@ -4,11 +4,11 @@ class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
+      first_name: '',
+      last_name: '',
       email: '',
       password: '',
-      confirmPassword: '',
+      confirm_password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -46,15 +46,15 @@ class Signup extends React.Component {
         { this.renderErrors() }
         <input
           type="text"
-          value={this.state.firstName}
+          value={this.state.first_name}
           placeholder="First Name *"
-          onChange={this.handleInput('firstName')}>
+          onChange={this.handleInput('first_name')}>
         </input>
         <input
           type="text"
-          value={this.state.lastName}
+          value={this.state.last_name}
           placeholder="Last Name *"
-          onChange={this.handleInput('lastName')}>
+          onChange={this.handleInput('last_name')}>
         </input>
         <input
           type="text"
@@ -70,9 +70,9 @@ class Signup extends React.Component {
         </input>
         <input
           type="password"
-          value={this.state.confirmPassword}
+          value={this.state.confirm_password}
           placeholder="Re-Enter password *"
-          onChange={this.handleInput('confirmPassword')}>
+          onChange={this.handleInput('confirm_password')}>
         </input>
         <button onClick={this.handleSubmit}>Create Account</button>
       </form>

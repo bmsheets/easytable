@@ -19,7 +19,6 @@ class MainNav extends React.Component {
 
   closeModal() {
     this.setState({ modalOpen: false });
-    console.log("clearing errors...");
     this.props.clearErrors();
   }
 
@@ -43,9 +42,14 @@ class MainNav extends React.Component {
 
     let authFeature;
     if (this.props.currentUser) {
+      const name = !!this.props.currentUser.firstName ? (
+        this.props.currentUser.firstName
+      ) : (
+        this.props.currentUser.email
+      );
       authFeature = (
         <div className="user-dropdown">
-          <a className="user-welcome">Hi, {this.props.currentUser.email}!</a>
+          <a className="user-welcome">Hi, {name}!</a>
           <button
             className="button signout-button"
             onClick={this.handleSignout}>Sign out</button>
