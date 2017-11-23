@@ -19,6 +19,8 @@ class MainNav extends React.Component {
 
   closeModal() {
     this.setState({ modalOpen: false });
+    console.log("clearing errors...");
+    this.props.clearErrors();
   }
 
   openModal() {
@@ -44,7 +46,7 @@ class MainNav extends React.Component {
       authFeature = (
         <div className="user-dropdown">
           <a className="user-welcome">Hi, {this.props.currentUser.email}!</a>
-          <button 
+          <button
             className="button signout-button"
             onClick={this.handleSignout}>Sign out</button>
         </div>
@@ -55,7 +57,7 @@ class MainNav extends React.Component {
       ) : (
         <SignupContainer closeModal={this.closeModal}/>
       );
-      
+
       authFeature = (
         <div className="auth-buttons">
           <button className="button signup-button" onClick={this.handleSignup}>Sign up</button>

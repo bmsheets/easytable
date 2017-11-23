@@ -28,11 +28,22 @@ class Signup extends React.Component {
     );
   }
 
+  renderErrors() {
+    return (
+      <ul className="errors-list">
+        {this.props.errors.map((error, idx) => (
+          <li className="error" key={idx}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     return (
     <div className="session">
       <form className="session-form">
         <h1>Welcome to EasyTable!</h1>
+        { this.renderErrors() }
         <input
           type="text"
           value={this.state.firstName}
@@ -42,13 +53,13 @@ class Signup extends React.Component {
         <input
           type="text"
           value={this.state.lastName}
-          placeholder="Last Name *"          
+          placeholder="Last Name *"
           onChange={this.handleInput('lastName')}>
         </input>
         <input
           type="text"
           value={this.state.email}
-          placeholder="Enter email *"          
+          placeholder="Enter email *"
           onChange={this.handleInput('email')}>
         </input>
         <input

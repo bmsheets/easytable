@@ -3,7 +3,7 @@
   margin: auto;
   max-width: 428px;
   padding: 30px 16px;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 .session-form {
@@ -41,4 +41,13 @@
   width: 100%;
   padding-bottom: 8px;
   margin-bottom: 16px;
+}
+
+.errors-list {
+  width: 100%;
+}
+
+.error {
+  color: $red;
+  margin-bottom: 10px;
 }

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       session: {
         currentUser: window.currentUser
       }
-    }
+    };
   }
   const store = createStore(preloadedState);  
   Modal.setAppElement(document.body);
@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
   defineUtils();
 });
 
+//For testing purposes
 function defineUtils() {
   window.login = APIUtil.postSession;
   window.logout = APIUtil.deleteSession;
   window.createUser = APIUtil.postUser;
   window.testUser = {
-    username: 'bob',
     email: 'bob@mail.com',
     password: 'password'
   };

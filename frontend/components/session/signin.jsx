@@ -25,11 +25,22 @@ class Signin extends React.Component {
     );
   }
 
+  renderErrors() {
+    return (
+      <ul className="errors-list">
+        {this.props.errors.map((error, idx) => (
+          <li className="error" key={idx}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     return (
     <div className="session">
       <form className="session-form">
         <h1>Please sign in</h1>
+        { this.renderErrors() }
         <input
           type="text"
           value={this.state.email}
