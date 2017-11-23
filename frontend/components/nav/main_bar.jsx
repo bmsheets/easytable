@@ -74,8 +74,9 @@ class MainNav extends React.Component {
     return (
       <div className="bar main-bar">
         <div className="logo-links">
-          <a>EasyTable</a>
-          <a>Choose your location</a>
+          <i className="fa fa-circle-o fa-2x"></i>
+          <a className="company-name">EasyTable</a>
+          <a className="location-dropdown">Choose your location</a>
         </div>
         { authFeature }
       </div>
