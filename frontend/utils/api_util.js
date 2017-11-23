@@ -20,3 +20,11 @@ export const postUser = (user) => {
     data: { user }
   });
 };
+
+export const postRestaurant = (restaurant) => {
+  return $.ajax({
+    url: '/api/restaurants',
+    method: 'POST',
+    data: { restaurant }
+  });
+};

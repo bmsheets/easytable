@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
   }
-  const store = createStore(preloadedState);  
+  const store = createStore(preloadedState);
+  window.store = store;
   Modal.setAppElement(document.body);
   ReactDOM.render(<Root store={store} />, root);
   defineUtils();
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //For testing purposes
 function defineUtils() {
+  window.getState = window.store.getState;
   window.login = APIUtil.postSession;
   window.logout = APIUtil.deleteSession;
   window.createUser = APIUtil.postUser;
@@ -31,4 +33,11 @@ function defineUtils() {
     email: 'bob@mail.com',
     password: 'password'
   };
+  window.createRestaurant = APIUtil.postRestaurant;
+  window.testRestaurant = {
+    name: "Burger King",
+    city: "Detroit",
+    country: "Lithuania",
+    capacity: 9000
+  }
 }
