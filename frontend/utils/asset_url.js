@@ -1,1 +1,0 @@
-export const bannerUrl = "https://media.otstatic.com/img/start_hero_images/us-hero-1600-72df3ed5e8831716f08d799a95d3cabf.jpg";

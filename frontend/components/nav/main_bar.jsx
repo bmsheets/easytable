@@ -14,6 +14,7 @@ class MainNav extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.handleSignin = this.handleSignin.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
+    this.handleSignout = this.handleSignout.bind(this);
   }
 
   closeModal() {
@@ -32,13 +33,20 @@ class MainNav extends React.Component {
     this.setState({ modalOpen: true, formType: "signup" });
   }
 
+  handleSignout() {
+    this.props.logout();
+  }
+
   render() {
 
     let authFeature;
     if (this.props.currentUser) {
       authFeature = (
         <div className="user-dropdown">
-          <a>Hi, {this.props.currentUser.email}!</a>
+          <a className="user-welcome">Hi, {this.props.currentUser.email}!</a>
+          <button 
+            className="button signout-button"
+            onClick={this.handleSignout}>Sign out</button>
         </div>
       );
     } else {

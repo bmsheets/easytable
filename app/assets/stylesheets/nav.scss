@@ -42,19 +42,25 @@
   color: black;
 }
 
-.signup-button {
+.signup-button,
+.signout-button {
   font-size: 14px;
   color: white;
   background-color: $blue;
   transition: background-color 300ms ease-out;
 }
 
-.signup-button:hover {
+.signup-button:hover,
+.signout-button:hover {
   background-color: $blue-hover;
 }
 
 .user-dropdown {
 
+}
+
+.user-welcome {
+  margin-right: 10px;
 }
 
 .logo-links > a {

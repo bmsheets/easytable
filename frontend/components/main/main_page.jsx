@@ -1,5 +1,4 @@
 import React from 'react';
-import {bannerUrl} from '../../utils/asset_url';
 
 export default () => {
   return (
