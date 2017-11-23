@@ -24,7 +24,8 @@
 }
 
 .button {
-  font-size: 14px;
+  box-sizing: border-box;
+  font-size: 16px;
   border-radius: 3px;
   padding: 0px 16px;
   height: 32;
@@ -32,7 +33,17 @@
   line-height: 2rem;
 }
 
+.signin-button {
+  color: #333;
+  transition: color 300ms ease-out;
+}
+
+.signin-button:hover {
+  color: black;
+}
+
 .signup-button {
+  font-size: 14px;
   color: white;
   background-color: $blue;
   transition: background-color 300ms ease-out;

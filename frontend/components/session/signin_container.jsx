@@ -3,8 +3,9 @@ import Signin from './signin';
 import { connect } from 'react-redux';
 import { login } from '../../actions/session';
 
-const mapDispatchToProps = (dispatch) => ({
-  login: formData => dispatch(login(formData))
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  login: formData => dispatch(login(formData)),
+  closeModal: ownProps.closeModal
 });
 
 export default connect(null, mapDispatchToProps)(Signin);

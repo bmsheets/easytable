@@ -22,14 +22,17 @@ class Signup extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createUser(this.state).then(
-      () => this.props.history.push('/')
+      () => {
+        console.log("closing modal after user creation");
+        this.props.closeModal();
+      }
     );
   }
 
   render() {
     return (
-    <div className="signup">
-      <form className="signup-form">
+    <div className="session">
+      <form className="session-form">
         <h1>Welcome to EasyTable!</h1>
         <input
           type="text"

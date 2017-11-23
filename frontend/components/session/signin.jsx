@@ -19,15 +19,17 @@ class Signin extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.login(this.state).then(
-      () => this.props.history.push('/')
+      () => {
+        this.props.closeModal();
+      }
     );
   }
 
   render() {
     return (
-    <div className="signin">
-      <h1>Signin Component</h1>
-      <form className="signin-form">
+    <div className="session">
+      <form className="session-form">
+        <h1>Please sign in</h1>
         <input
           type="text"
           value={this.state.email}

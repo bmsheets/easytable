@@ -14,10 +14,8 @@
  */
  @import 'reset';
  @import 'variables';
-//  @import 'temp';
  @import 'components/root';
  @import 'nav';
  @import 'main';
  @import 'footer';
- @import 'components/signup';
- @import 'components/signin';
+ @import 'components/session';

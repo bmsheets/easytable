@@ -35,17 +35,17 @@ class MainNav extends React.Component {
   render() {
 
     let authFeature;
-    if (undefined) {
+    if (this.props.currentUser) {
       authFeature = (
         <div className="user-dropdown">
-          <a>Hi, {undefined}!</a>
+          <a>Hi, {this.props.currentUser.email}!</a>
         </div>
       );
     } else {
       const sessionForm = this.state.formType === "signin" ? (
-        <SigninContainer />
+        <SigninContainer closeModal={this.closeModal}/>
       ) : (
-        <SignupContainer />
+        <SignupContainer closeModal={this.closeModal}/>
       );
       
       authFeature = (

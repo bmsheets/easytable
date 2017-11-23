@@ -3,8 +3,9 @@ import Signup from './signup';
 import { connect } from 'react-redux';
 import { createUser } from '../../actions/session';
 
-const mapDispatchToProps = (dispatch) => ({
-  createUser: formData => dispatch(createUser(formData))
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  createUser: formData => dispatch(createUser(formData)),
+  closeModal: ownProps.closeModal
 });
 
 export default connect(null, mapDispatchToProps)(Signup);
