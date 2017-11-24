@@ -1,0 +1,51 @@
+.restaurant-form-container {
+  display: block;
+  max-width: 1060px;
+  background: white;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 4px;
+  margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
+}
+
+.restaurant-form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 40px 25px;
+}
+
+.restaurant-form input {
+  padding: 10px 16px;
+  height: 46px;
+  display: inline-block;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 3px;
+}
+
+.restaurant-form button {
+  background: $red;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 0 55px;
+  height: 50px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  width: 50px;
+  margin: 0 auto;
+}
+
+.restaurant-form h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+div[class=".restaurant-form-col-"] {
+  display: flex;
+  flex: 2;
+  width: 100%;
+  margin: 0 10px;
+  justify-content: space-around;
+}

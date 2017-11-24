@@ -12,11 +12,16 @@
  *
  *= require_self
  */
- @import 'reset';
- @import 'variables';
+
+ @import 'base/reset';
+ @import 'base/variables';
+
+ @import 'layouts/nav';
+ @import 'layouts/main';
+ @import 'layouts/footer';
+
  @import 'components/root';
- @import 'nav';
- @import 'main';
- @import 'footer';
- @import 'components/session';
  @import 'components/restaurants';
+
+ @import 'forms/session';
+ @import 'forms/restaurants';
