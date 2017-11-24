@@ -8,6 +8,7 @@ class Signin extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   handleInput(type) {
@@ -23,6 +24,17 @@ class Signin extends React.Component {
         this.props.closeModal();
       }
     );
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const demoUser = {
+      email: 'guest@mail.com',
+      password: 'password'
+    };
+    this.props.login(demoUser).then(
+      () => this.props.closeModal()
+    )
   }
 
   renderErrors() {
@@ -44,16 +56,17 @@ class Signin extends React.Component {
         <input
           type="text"
           value={this.state.email}
-          placeholder="Enter email *"          
+          placeholder="Enter email *"
           onChange={this.handleInput('email')}>
         </input>
         <input
           type="password"
           value={this.state.password}
-          placeholder="Enter password *"          
+          placeholder="Enter password *"
           onChange={this.handleInput('password')}>
         </input>
-        <button onClick={this.handleSubmit}>Sign In</button>
+        <button className="session-button" onClick={this.handleSubmit}>Sign In</button>
+        <button className="demo-button" onClick={this.handleDemo}>Demo</button>
       </form>
     </div>
     );

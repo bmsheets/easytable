@@ -1,4 +1,5 @@
 import React from 'react';
+import RestaurantFormContainer from '../restaurants/restaurant_form_container';
 
 export default () => {
   return (

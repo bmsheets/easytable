@@ -11,6 +11,7 @@ class Signup extends React.Component {
       confirm_password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   handleInput(type) {
@@ -26,6 +27,17 @@ class Signup extends React.Component {
         this.props.closeModal();
       }
     );
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const demoUser = {
+      email: 'guest@mail.com',
+      password: 'password'
+    };
+    this.props.login(demoUser).then(
+      () => this.props.closeModal()
+    )
   }
 
   renderErrors() {
@@ -74,7 +86,8 @@ class Signup extends React.Component {
           placeholder="Re-Enter password *"
           onChange={this.handleInput('confirm_password')}>
         </input>
-        <button onClick={this.handleSubmit}>Create Account</button>
+        <button className="session-button" onClick={this.handleSubmit}>Create Account</button>
+        <button className="demo-button" onClick={this.handleDemo}>Demo</button>
       </form>
     </div>
     );

@@ -24,7 +24,7 @@
 .session-form button {
   background-color: $red;
   padding: 14px 28px;
-  margin: 16px 0px;
+  // margin: 16px 0px;
   width: 100%;
   text-align: center;
   color: white;
@@ -33,6 +33,14 @@
 
 .session-form button:hover {
   background-color: $red-hover;
+}
+
+.session-button {
+  margin-top: 16px;
+}
+
+.demo-button {
+  margin: 12px 0px;
 }
 
 .session-form h1 {
