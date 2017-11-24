@@ -1,4 +1,6 @@
 class Api::RestaurantsController < ApplicationController
+  INDEX_LIMIT = 10
+
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
@@ -6,6 +8,11 @@ class Api::RestaurantsController < ApplicationController
     else
       render json: @restaurant.errors.full_messages, status: 401
     end
+  end
+
+  def index
+    @restaurants = Restaurant.limit(INDEX_LIMIT)
+    render :index
   end
 
   private

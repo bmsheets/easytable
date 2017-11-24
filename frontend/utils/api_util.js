@@ -28,3 +28,10 @@ export const postRestaurant = (restaurant) => {
     data: { restaurant }
   });
 };
+
+export const getRestaurants = () => {
+  return $.ajax({
+    url: '/api/restaurants',
+    method: 'GET'
+  })
+}
