@@ -1,0 +1,66 @@
+.searchbar {
+  background-color: white;
+  border-radius: 5px;
+  width: 1208px;
+  position: relative;
+  left: 36px;
+  bottom: 114px;
+}
+
+.searchbar h1 {
+  font-size: 32px;
+  text-align: left;
+  padding: 24px;
+}
+
+.searchbar-form {
+  padding: 0 24px 30px 24px;
+  background-color: white;
+  height: 48px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.searchbar-form input,
+.searchbar-form select {
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.searchbar-form button {
+  color: white;
+  background-color: $red;
+  border-top-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 3px;
+  width: 16%;
+  height: 100%;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 300ms ease-out;
+}
+
+.searchbar-form button:hover {
+  background-color: $red-hover;
+}
+
+.searchbar-partysize {
+  width: 15%;
+  background: white;
+}
+
+.searchbar-date {
+  width: 23%;
+}
+
+.searchbar-time {
+  width: 15%;
+}
+
+.searchbar-searchterm {
+  width: 30%
+}
+
+// 15%, 23%, 15%, 31%, 16%

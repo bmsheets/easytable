@@ -4,7 +4,7 @@ export default ({key, name}) => {
   return (
     <li className="restaurant-index-item">
       <div className="restaurant-index-item-col-1">
-        <a className="restaurant-index-item-thumbnail">img</a>
+        <a className="restaurant-index-item-thumbnail"></a>
       </div>
       <div className="restaurant-index-item-col-2">
         <a className="restaurant-index-item-name">{name}</a>

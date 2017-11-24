@@ -1,7 +1,6 @@
 .restaurant-index {
-  width: 760px;
+  max-width: 760px;
   margin: auto;
-  background-color: white;
 }
 
 .restaurant-index-item {
@@ -28,8 +27,8 @@
   display: inline-block;
   height: 150px;
   width: 150px;
-  border: 1px solid black;
   border-radius: 5px;
+  background-image: url($thumbnail-url);
 }
 
 .restaurant-index-item-name {
@@ -44,6 +43,11 @@
 }
 
 .restaurant-index-item-row-5 {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: white;
+  line-height: 1.2rem;
+  padding: .3em .2em;
   background-color: $red;
   border-radius: 5px;
 }
