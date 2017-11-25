@@ -88,7 +88,7 @@ class RestaurantForm extends React.Component {
               onChange={this.handleInput('capacity')}>
             </input>
           </div>
-          <button onClick={this.handleSubmit}>Submit</button>
+          <button onClick={this.handleSubmit}>SUBMIT</button>
         </form>
       </div>
     );

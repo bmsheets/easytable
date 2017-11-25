@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 import SigninContainer from '../session/signin_container';
 import SignupContainer from '../session/signup_container';
 
@@ -7,39 +8,34 @@ class MainNav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalOpen: false,
       formType: ''
     };
-    this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
     this.handleSignin = this.handleSignin.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
     this.handleSignout = this.handleSignout.bind(this);
-  }
-
-  closeModal() {
-    this.setState({ modalOpen: false });
-    this.props.clearErrors();
-  }
-
-  openModal() {
-    this.setState({ modalOpen: true });
+    this.handleClose = this.handleClose.bind(this);
   }
 
   handleSignin() {
-    this.setState({ modalOpen: true, formType: "signin" });
+    this.props.openModal();
+    this.setState({formType: "signin"});
   }
 
   handleSignup() {
-    this.setState({ modalOpen: true, formType: "signup" });
+    this.props.openModal();
+    this.setState({formType: "signup"})
   }
 
   handleSignout() {
     this.props.logout();
   }
 
-  render() {
+  handleClose() {
+    this.props.closeModal();
+    this.props.clearErrors();
+  }
 
+  render() {
     let authFeature;
     if (this.props.currentUser) {
       const name = !!this.props.currentUser.firstName ? (
@@ -57,9 +53,9 @@ class MainNav extends React.Component {
       );
     } else {
       const sessionForm = this.state.formType === "signin" ? (
-        <SigninContainer closeModal={this.closeModal}/>
+        <SigninContainer />
       ) : (
-        <SignupContainer closeModal={this.closeModal}/>
+        <SignupContainer />
       );
 
       authFeature = (
@@ -67,8 +63,8 @@ class MainNav extends React.Component {
           <button className="button signup-button" onClick={this.handleSignup}>Sign up</button>
           <button className="button" onClick={this.handleSignin}>Sign in</button>
           <Modal
-            isOpen={this.state.modalOpen}
-            onRequestClose={this.closeModal}
+            isOpen={this.props.modalIsOpen}
+            onRequestClose={this.handleClose}
             className="modal"
             overlayClassName="overlay">
             { sessionForm }
@@ -81,7 +77,7 @@ class MainNav extends React.Component {
       <div className="bar main-bar">
         <div className="logo-links">
           <i className="fa fa-circle-o fa-2x"></i>
-          <a className="company-name">EasyTable</a>
+          <Link className="company-name" to="/" replace>EasyTable</Link>
           <a className="location-dropdown">Choose your location</a>
         </div>
         { authFeature }

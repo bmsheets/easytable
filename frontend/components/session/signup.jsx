@@ -25,6 +25,7 @@ class Signup extends React.Component {
     this.props.createUser(this.state).then(
       () => {
         this.props.closeModal();
+        this.props.clearErrors();
       }
     );
   }
@@ -36,7 +37,10 @@ class Signup extends React.Component {
       password: 'password'
     };
     this.props.login(demoUser).then(
-      () => this.props.closeModal()
+      () => {
+        this.props.closeModal();
+        this.props.clearErrors();
+      }
     )
   }
 

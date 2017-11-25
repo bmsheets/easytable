@@ -24,11 +24,11 @@ class SearchBar extends React.Component {
 
   renderOptions() {
     const options = [];
-    options.push(<option value="1">1 person</option>);
+    options.push(<option key="1" value="1">1 person</option>);
     for (let i = 2; i < 21; i++) {
-      options.push(<option value={i}>{i} people</option>);
+      options.push(<option key={i} value={i}>{i} people</option>);
     }
-    options.push(<option value={undefined}>Larger party</option>);
+    options.push(<option key="21" value={undefined}>Larger party</option>);
     return options;
   }
 

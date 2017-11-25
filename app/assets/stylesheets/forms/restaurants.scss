@@ -18,13 +18,14 @@
 .restaurant-form input {
   padding: 10px 16px;
   height: 46px;
+  width: 420px;
   display: inline-block;
   border: 1px solid rgb(224, 224, 224);
   border-radius: 3px;
 }
 
 .restaurant-form button {
-  background: $red;
+  background-color: $red;
   border-radius: 50px;
   display: inline-block;
   padding: 0 55px;
@@ -32,8 +33,14 @@
   color: white;
   text-align: center;
   font-size: 16px;
+  font-weight: 600;
   width: 50px;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
+  transition: background-color 300ms ease-out;
+}
+
+.restaurant-form button:hover {
+  background-color: $red-hover;
 }
 
 .restaurant-form h1 {
@@ -42,10 +49,10 @@
   margin-bottom: 20px;
 }
 
-div[class=".restaurant-form-col-"] {
+div [class^="restaurant-form-col-"] {
   display: flex;
   flex: 2;
   width: 100%;
-  margin: 0 10px;
+  margin: 10px auto;
   justify-content: space-around;
 }

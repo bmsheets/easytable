@@ -1,7 +1,8 @@
 import React from 'react';
 import Signin from './signin';
 import { connect } from 'react-redux';
-import { login } from '../../actions/session';
+import { login, receiveErrors } from '../../actions/session';
+import { closeModal } from '../../actions/ui';
 
 const mapStateToProps = (state) => ({
   errors: state.errors.session
@@ -9,7 +10,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   login: formData => dispatch(login(formData)),
-  closeModal: ownProps.closeModal
+  closeModal: () => dispatch(closeModal()),
+  clearErrors: () => dispatch(receiveErrors([]))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signin);
