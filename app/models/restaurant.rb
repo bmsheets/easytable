@@ -1,12 +1,12 @@
 class Restaurant < ApplicationRecord
   validates :name, :city, :country, :capacity, presence: true
 
-  def self.search(searchTerm)
+  def self.search(search_term)
     Restaurant.where(
-      "name LIKE ? OR city LIKE ? OR state LIKE ?",
-      searchTerm,
-      searchTerm,
-      searchTerm
+      "name ILIKE ? OR city ILIKE ? OR state ILIKE ?",
+      search_term,
+      search_term,
+      search_term
     )
   end
 end

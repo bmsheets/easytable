@@ -41,7 +41,7 @@ class Signup extends React.Component {
         this.props.closeModal();
         this.props.clearErrors();
       }
-    )
+    );
   }
 
   renderErrors() {

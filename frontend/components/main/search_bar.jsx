@@ -1,13 +1,14 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      party_size: '',
+      partySize: '',
       date: '',
       time: '',
-      search_term: ''
+      searchTerm: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -20,6 +21,10 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log("performing search with term: ", this.state.searchTerm);
+    this.props.searchRestaurants(this.state.searchTerm).then(
+      this.props.history.push('/restaurants')
+    );
   }
 
   renderOptions() {
@@ -39,8 +44,8 @@ class SearchBar extends React.Component {
         <form className="searchbar-form">
           <select
             className="searchbar-partysize"
-            value={this.state.party_size}
-            onChange={this.handleInput('party_size')}>
+            value={this.state.partySize}
+            onChange={this.handleInput('partySize')}>
             {this.renderOptions()}
           </select>
           <input
@@ -57,8 +62,8 @@ class SearchBar extends React.Component {
             className="searchbar-searchterm"
             placeholder="Location, Restaurant, or Cuisine"
             type="search"
-            value={this.state.search_term}
-            onChange={this.handleInput('search_term')}></input>
+            value={this.state.searchTerm}
+            onChange={this.handleInput('searchTerm')}></input>
           <button onClick={this.handleSubmit}>Find a Table</button>
         </form>
       </div>
@@ -66,4 +71,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+export default withRouter(SearchBar);

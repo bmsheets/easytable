@@ -23,7 +23,7 @@ class MainNav extends React.Component {
 
   handleSignup() {
     this.props.openModal();
-    this.setState({formType: "signup"})
+    this.setState({formType: "signup"});
   }
 
   handleSignout() {

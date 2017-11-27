@@ -15,6 +15,11 @@ class Api::RestaurantsController < ApplicationController
     render :index
   end
 
+  def search
+    @restaurants = Restaurant.search(params[:search_term]).limit(INDEX_LIMIT).order(:name)
+    render :index
+  end
+
   private
   def restaurant_params
     params.require(:restaurant)

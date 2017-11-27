@@ -25,11 +25,11 @@ export const login = (formData) => dispatch => {
 };
 
 export const logout = () => dispatch => {
-  return deleteSession().then(() => dispatch(logoutCurrentUser())); 
+  return deleteSession().then(() => dispatch(logoutCurrentUser()));
 };
 
 export const createUser = (formData) => dispatch => {
   return postUser(formData).then(
     user => dispatch(receiveCurrentUser(user)),
-    err => dispatch(receiveErrors(err.responseJSON)));   
+    err => dispatch(receiveErrors(err.responseJSON)));
 };

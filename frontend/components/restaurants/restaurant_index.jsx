@@ -9,7 +9,7 @@ class RestaurantIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchRestaurants()
+    // this.props.fetchRestaurants();
   }
 
   handleInput(type) {
@@ -29,7 +29,10 @@ class RestaurantIndex extends React.Component {
           this.props.restaurants.map(restaurant => (
             <RestaurantIndexItem
               key={restaurant.id}
-              name={restaurant.name}/>
+              name={restaurant.name}
+              city={restaurant.city}
+              state={restaurant.state}
+              country={restaurant.country}/>
           ))
         }
       </ul>

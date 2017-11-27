@@ -29,6 +29,7 @@ function defineUtils() {
   window.login = APIUtil.postSession;
   window.logout = APIUtil.deleteSession;
   window.createUser = APIUtil.postUser;
+  window.search = APIUtil.postSearch;
   window.testUser = {
     email: 'bob@mail.com',
     password: 'password'
@@ -39,5 +40,5 @@ function defineUtils() {
     city: "Detroit",
     country: "Lithuania",
     capacity: 9000
-  }
+  };
 }

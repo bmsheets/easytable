@@ -33,5 +33,13 @@ export const getRestaurants = () => {
   return $.ajax({
     url: '/api/restaurants',
     method: 'GET'
-  })
-}
+  });
+};
+
+export const postSearch = (searchTerm) => {
+  return $.ajax({
+    url: '/api/restaurants/search',
+    method: 'POST',
+    data: { search_term: searchTerm }
+  });
+};

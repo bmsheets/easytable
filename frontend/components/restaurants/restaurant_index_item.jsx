@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({key, name}) => {
+export default ({key, name, city, state, country}) => {
   return (
     <li className="restaurant-index-item">
       <div className="restaurant-index-item-col-1">
@@ -9,19 +9,19 @@ export default ({key, name}) => {
       <div className="restaurant-index-item-col-2">
         <a className="restaurant-index-item-name">{name}</a>
         <div className="restaurant-index-item-row-1">
-          row 1
+          city: {city}
         </div>
         <div className="restaurant-index-item-row-2">
-          row 2
+          state: {state}
         </div>
         <div className="restaurant-index-item-row-3">
-          row 3
+          country: {country}
         </div>
         <div className="restaurant-index-item-row-4">
-          row 4
+          cuisine
         </div>
         <div className="restaurant-index-item-row-5">
-          row 5
+          reservations
         </div>
       </div>
     </li>
