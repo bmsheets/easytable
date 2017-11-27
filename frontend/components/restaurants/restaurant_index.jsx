@@ -32,7 +32,8 @@ class RestaurantIndex extends React.Component {
               name={restaurant.name}
               city={restaurant.city}
               state={restaurant.state}
-              country={restaurant.country}/>
+              country={restaurant.country}
+              cuisine={restaurant.cuisine}/>
           ))
         }
       </ul>

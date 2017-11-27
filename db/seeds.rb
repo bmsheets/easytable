@@ -11,7 +11,10 @@ User.create({first_name: "Bob", email: "bob@mail.com", password: "password"})
 User.create({first_name: "Guest", email: "guest@mail.com", password: "password"})
 
 restaurants = ActiveSupport::JSON.decode(File.read('db/seeds/restaurants.json'))
+cuisines = ["Italian", "French", "American", "Indian", "Japanese", "Chinese",
+   "Korean", "Thai", "Greek", "Vietnamese", "Mexican", "Hawaiian", "Spanish"]
 
 restaurants.each do |restaurant|
+  restaurant[:cuisine] = cuisines.sample
   Restaurant.create(restaurant)
 end

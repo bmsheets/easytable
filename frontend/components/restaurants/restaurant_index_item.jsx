@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({key, name, city, state, country}) => {
+export default ({key, name, city, state, country, cuisine}) => {
   return (
     <li className="restaurant-index-item">
       <div className="restaurant-index-item-col-1">
@@ -18,7 +18,7 @@ export default ({key, name, city, state, country}) => {
           country: {country}
         </div>
         <div className="restaurant-index-item-row-4">
-          cuisine
+          cuisine: {cuisine}
         </div>
         <div className="restaurant-index-item-row-5">
           reservations
