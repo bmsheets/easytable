@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Component from './component';
+import RestaurantIndexSearch from './restaurant_index_search';
 
 const mapStateToProps = (state, ownProps) => ({
 });
@@ -8,4 +8,4 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Component);
+export default connect(mapStateToProps, mapDispatchToProps)(RestaurantIndexSearch);

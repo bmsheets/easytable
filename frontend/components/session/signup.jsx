@@ -22,12 +22,16 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createUser(this.state).then(
-      () => {
-        this.props.closeModal();
-        this.props.clearErrors();
-      }
-    );
+    if (this.state.password !== this.state.confirm_password) {
+      this.props.receiveErrors(["Passwords do not match."]);
+    } else {
+      this.props.createUser(this.state).then(
+        () => {
+          this.props.closeModal();
+          this.props.clearErrors();
+        }
+      );
+    }
   }
 
   handleDemo(e) {

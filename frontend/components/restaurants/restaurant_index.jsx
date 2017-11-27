@@ -1,5 +1,6 @@
 import React from 'react';
 import RestaurantIndexItem from './restaurant_index_item';
+import SearchBarContainer from '../main/search_bar_container';
 
 class RestaurantIndex extends React.Component {
   constructor(props) {
@@ -24,19 +25,22 @@ class RestaurantIndex extends React.Component {
 
   render() {
     return (
-      <ul className="restaurant-index">
-        {
-          this.props.restaurants.map(restaurant => (
-            <RestaurantIndexItem
-              key={restaurant.id}
-              name={restaurant.name}
-              city={restaurant.city}
-              state={restaurant.state}
-              country={restaurant.country}
-              cuisine={restaurant.cuisine}/>
-          ))
-        }
-      </ul>
+      <div className="restaurant-index">
+        <SearchBarContainer />
+        <ul className="restaurant-index-list">
+          {
+            this.props.restaurants.map(restaurant => (
+              <RestaurantIndexItem
+                key={restaurant.id}
+                name={restaurant.name}
+                city={restaurant.city}
+                state={restaurant.state}
+                country={restaurant.country}
+                cuisine={restaurant.cuisine}/>
+            ))
+          }
+        </ul>
+      </div>
     );
   }
 }

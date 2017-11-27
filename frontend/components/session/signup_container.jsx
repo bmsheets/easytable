@@ -12,7 +12,8 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   createUser: formData => dispatch(createUser(formData)),
   login: formData => dispatch(login(formData)),
   closeModal: () => dispatch(closeModal()),
-  clearErrors: () => dispatch(receiveErrors([]))
+  clearErrors: () => dispatch(receiveErrors([])),
+  receiveErrors: (errors) => dispatch(receiveErrors(errors))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signup);
