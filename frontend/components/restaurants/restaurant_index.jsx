@@ -32,6 +32,7 @@ class RestaurantIndex extends React.Component {
             this.props.restaurants.map(restaurant => (
               <RestaurantIndexItem
                 key={restaurant.id}
+                id={restaurant.id}
                 name={restaurant.name}
                 city={restaurant.city}
                 state={restaurant.state}

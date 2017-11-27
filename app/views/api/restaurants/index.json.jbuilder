@@ -1,5 +1,7 @@
-json.array! @restaurants do |restaurant|
-  json.extract! restaurant, :name, :city, :state, :country, :address, :capacity, :cuisine
-  json.zipCode restaurant, :zip_code
-  json.phoneNumber restaurant, :phone_number
+@restaurants.each do |restaurant|
+  json.set! restaurant.id do
+    json.extract! restaurant, :id, :name, :city, :state, :country, :address, :capacity, :cuisine
+    json.zipCode restaurant[:zip_code]
+    json.phoneNumber restaurant[:phone_number]
+  end
 end

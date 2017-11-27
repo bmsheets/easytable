@@ -30,6 +30,7 @@ function defineUtils() {
   window.logout = APIUtil.deleteSession;
   window.createUser = APIUtil.postUser;
   window.search = APIUtil.postSearch;
+  window.getRestaurant = APIUtil.getRestaurant;
   window.testUser = {
     email: 'bob@mail.com',
     password: 'password'

@@ -1,4 +1,4 @@
-import { postRestaurant, getRestaurants, postSearch } from '../utils/api_util';
+import { postRestaurant, getRestaurants, getRestaurant, postSearch } from '../utils/api_util';
 
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
 export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
@@ -21,6 +21,12 @@ export const createRestaurant = (formData) => dispatch => {
 export const fetchRestaurants = () => dispatch => {
   return getRestaurants().then(
     restaurants => dispatch(receiveRestaurants(restaurants))
+  );
+};
+
+export const fetchRestaurant = (restaurantId) => dispatch => {
+  return getRestaurant(restaurantId).then(
+    restaurant => dispatch(receiveRestaurant(restaurant))
   );
 };
 

@@ -36,6 +36,13 @@ export const getRestaurants = () => {
   });
 };
 
+export const getRestaurant = (restaurantId) => {
+  return $.ajax({
+    url: '/api/restaurants/' + restaurantId,
+    method: 'GET'
+  });
+};
+
 export const postSearch = (searchTerm) => {
   return $.ajax({
     url: '/api/restaurants/search',

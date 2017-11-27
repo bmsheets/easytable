@@ -10,6 +10,11 @@ class Api::RestaurantsController < ApplicationController
     end
   end
 
+  def show
+    @restaurant = Restaurant.find(params[:id])
+    render :show
+  end
+
   def index
     @restaurants = Restaurant.limit(INDEX_LIMIT)
     render :index

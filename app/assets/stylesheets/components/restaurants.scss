@@ -55,3 +55,18 @@
 div[class=".restaurant-index-item-row-"] {
 
 }
+
+.restaurant-show-header {
+  height: 204px;
+  background: linear-gradient(to right, rgba(102, 102, 102, .9), rgba(51, 51, 51, .9));
+}
+
+.restaurant-show-profile {
+  display: inline-block;
+  padding: 80px 20px 32px 20px;
+}
+
+.restaurant-show-profile h1 {
+  color: white;
+  font-size: 2.25em;
+}

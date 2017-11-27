@@ -38,7 +38,7 @@ class MainNav extends React.Component {
   render() {
     let authFeature;
     if (this.props.currentUser) {
-      const name = !!this.props.currentUser.firstName ? (
+      const name = this.props.currentUser.firstName ? (
         this.props.currentUser.firstName
       ) : (
         this.props.currentUser.email

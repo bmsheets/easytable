@@ -18,7 +18,9 @@ class Template extends React.Component {
   }
 
   render() {
-    return ();
+    return (
+      <div></div>
+    );
   }
 }
 
