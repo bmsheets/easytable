@@ -21,7 +21,6 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("performing search with query state: ", this.state);
     this.props.searchRestaurants(this.state.searchTerm).then(
       this.props.history.push('/restaurants')
     );
