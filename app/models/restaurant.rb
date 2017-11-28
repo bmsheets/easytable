@@ -1,5 +1,5 @@
 class Restaurant < ApplicationRecord
-  validates :name, :city, :country, :capacity, presence: true
+  validates :name, :city, :country, :capacity, :cuisine, presence: true
 
   def self.search(search_term)
     Restaurant.where(

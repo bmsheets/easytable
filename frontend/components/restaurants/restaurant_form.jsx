@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class RestaurantForm extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class RestaurantForm extends React.Component {
       phone_number: '',
       zip_code: '',
       capacity: '',
+      cuisine: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -24,7 +26,23 @@ class RestaurantForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createRestaurant(this.state);
+    this.props.createRestaurant(this.state).then(() => {
+      const targetName = this.state.name;
+      const newRestaurant = Object.values(this.props.restaurants).find(
+        restaurant => (restaurant.name === targetName)
+      );
+      this.props.history.push("/restaurants/" + newRestaurant.id);
+    });
+  }
+
+  renderErrors() {
+    return (
+      <ul className="errors-list">
+        {this.props.errors.map((error, idx) => (
+          <li className="error" key={idx}>{error}</li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -32,6 +50,7 @@ class RestaurantForm extends React.Component {
       <div className="restaurant-form-container">
         <form className="restaurant-form">
           <h1>Restaurant Form</h1>
+          { this.renderErrors() }
           <div className="restaurant-form-col-1">
             <input
               type="text"
@@ -50,8 +69,14 @@ class RestaurantForm extends React.Component {
             <input
               type="text"
               value={this.state.state}
-              placeholder="State *"
+              placeholder="State/Province *"
               onChange={this.handleInput('state')}>
+            </input>
+            <input
+              type="text"
+              value={this.state.zip_code}
+              placeholder="Zip/Postal Code *"
+              onChange={this.handleInput('zip_code')}>
             </input>
             <input
               type="text"
@@ -76,13 +101,13 @@ class RestaurantForm extends React.Component {
           </div>
           <div className="restaurant-form-col-4">
             <input
-              type="number"
-              value={this.state.zip_code}
-              placeholder="Restaurant Zip Code *"
-              onChange={this.handleInput('zip_code')}>
+              type="text"
+              value={this.state.cuisine}
+              placeholder="Cuisine *"
+              onChange={this.handleInput('cuisine')}>
             </input>
             <input
-              type="number"
+              type="text"
               value={this.state.capacity}
               placeholder="Restaurant Capacity *"
               onChange={this.handleInput('capacity')}>
@@ -95,4 +120,4 @@ class RestaurantForm extends React.Component {
   }
 }
 
-export default RestaurantForm;
+export default withRouter(RestaurantForm);
