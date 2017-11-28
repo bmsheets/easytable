@@ -11,10 +11,14 @@ User.create({first_name: "Bob", email: "bob@mail.com", password: "password"})
 User.create({first_name: "Guest", email: "guest@mail.com", password: "password"})
 
 restaurants = ActiveSupport::JSON.decode(File.read('db/seeds/restaurants.json'))
+restaurant_names = ActiveSupport::JSON.decode(File.read('db/seeds/restaurant_names.json'))
+thumbnail_urls = ActiveSupport::JSON.decode(File.read('db/seeds/image_urls.json'))
 cuisines = ["Italian", "French", "American", "Indian", "Japanese", "Chinese",
    "Korean", "Thai", "Greek", "Vietnamese", "Mexican", "Hawaiian", "Spanish"]
 
-restaurants.each do |restaurant|
+restaurants.each.with_index do |restaurant, idx|
+  restaurant[:name] = restaurant_names[idx]
   restaurant[:cuisine] = cuisines.sample
+  restaurant[:thumbnail_url] = thumbnail_urls.sample
   Restaurant.create(restaurant)
 end

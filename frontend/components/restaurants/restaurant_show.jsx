@@ -28,7 +28,8 @@ class RestaurantShow extends React.Component {
     <div className="restaurant-show">
       <div className="restaurant-show-header">
         <div className="restaurant-show-banner"/>
-        <div className="restaurant-index-item-thumbnail"></div>
+          <a className="restaurant-index-item-thumbnail"
+            style={{backgroundImage: `url(${this.props.restaurant.thumbnailUrl})`}}></a>
         <div className="restaurant-show-profile">
           <h1>{this.props.restaurant.name}</h1>
           <span>Rating</span>

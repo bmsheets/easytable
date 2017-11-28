@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default ({key, id, name, city, state, country, cuisine}) => {
+export default ({key, id, name, city, state, country, cuisine, thumbnailUrl}) => {
   const linkPath = "restaurants/" + id;
   return (
     <li className="restaurant-index-item">
       <div className="restaurant-index-item-col-1">
-        <a className="restaurant-index-item-thumbnail"></a>
+        <a className="restaurant-index-item-thumbnail"
+          style={{backgroundImage: `url(${thumbnailUrl})`}}></a>
       </div>
       <div className="restaurant-index-item-col-2">
         <Link
