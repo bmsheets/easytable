@@ -26,6 +26,7 @@
 .searchbar-form select {
   height: 100%;
   border: 1px solid rgba(0, 0, 0, 0.08);
+  border-right: none;
 }
 
 .searchbar-form button {
@@ -59,8 +60,17 @@
   width: 15%;
 }
 
-.searchbar-searchterm {
-  width: 30%
+.searchbar-icon {
+  color: #999;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-right: none;
+  padding: 16px 8px;
+}
+
+#searchterm {
+  border-left: none;
+  width: 28%
 }
 
 // 15%, 23%, 15%, 31%, 16%

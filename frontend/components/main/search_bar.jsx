@@ -58,7 +58,9 @@ class SearchBar extends React.Component {
             type="time"
             value={this.state.time}
             onChange={this.handleInput('time')}></input>
+          <i className="fa fa-search searchbar-icon" aria-hidden="true"></i>
           <input
+            id="searchterm"
             className="searchbar-searchterm"
             placeholder="Location, Restaurant, or Cuisine"
             type="search"
