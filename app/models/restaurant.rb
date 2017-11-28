@@ -3,11 +3,8 @@ class Restaurant < ApplicationRecord
 
   def self.search(search_term)
     Restaurant.where(
-      "name ILIKE ? OR city ILIKE ? OR state ILIKE ? OR cuisine ILIKE ?",
-      search_term,
-      search_term,
-      search_term,
-      search_term
+      "name ILIKE :term OR city ILIKE :term OR state ILIKE :term OR cuisine ILIKE :term",
+      term: "%#{search_term}%"
     )
   end
 end
