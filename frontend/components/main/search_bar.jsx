@@ -21,20 +21,30 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("performing search with term: ", this.state.searchTerm);
+    console.log("performing search with query state: ", this.state);
     this.props.searchRestaurants(this.state.searchTerm).then(
       this.props.history.push('/restaurants')
     );
   }
 
-  renderOptions() {
-    const options = [];
-    options.push(<option key="1" value="1">1 person</option>);
+  generatePartySizes() {
+    const partySizes = [];
+    partySizes.push(<option key="1" value="1">1 person</option>);
     for (let i = 2; i < 21; i++) {
-      options.push(<option key={i} value={i}>{i} people</option>);
+      partySizes.push(<option key={i} value={i}>{i} people</option>);
     }
-    options.push(<option key="21" value={undefined}>Larger party</option>);
-    return options;
+    partySizes.push(<option key="21" value={undefined}>Larger party</option>);
+    return partySizes;
+  }
+
+  generateReservationTimes() {
+    const reservationTimes = [];
+    reservationTimes.push(<option key="1" value={undefined}>4:30 PM</option>);
+    for (let i = 2, hour = 5; hour < 12; i += 2, hour++) {
+      reservationTimes.push(<option key={i} value={undefined}>{hour}:00 PM </option>);
+      reservationTimes.push(<option key={i + 1} value={undefined}>{hour}:30 PM </option>);
+    }
+    return reservationTimes;
   }
 
   render() {
@@ -46,18 +56,19 @@ class SearchBar extends React.Component {
             className="searchbar-partysize"
             value={this.state.partySize}
             onChange={this.handleInput('partySize')}>
-            {this.renderOptions()}
+            {this.generatePartySizes()}
           </select>
           <input
             className="searchbar-date"
             type="date"
             value={this.state.date}
             onChange={this.handleInput('date')}></input>
-          <input
+          <select
             className="searchbar-time"
-            type="time"
             value={this.state.time}
-            onChange={this.handleInput('time')}></input>
+            onChange={this.handleInput('time')}>
+            {this.generateReservationTimes()}
+          </select>
           <i className="fa fa-search searchbar-icon" aria-hidden="true"></i>
           <input
             id="searchterm"

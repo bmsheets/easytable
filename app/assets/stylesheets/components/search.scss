@@ -23,10 +23,17 @@
 }
 
 .searchbar-form input,
-.searchbar-form select {
+.searchbar-form select,
+.searchbar-icon {
+  font-family: $font-stack;
+  font-size: 16px;
+  color: rgb(51, 51, 51);
   height: 100%;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-right: none;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  padding-left: 14px;
 }
 
 .searchbar-form button {
@@ -58,6 +65,7 @@
 
 .searchbar-time {
   width: 15%;
+  background: white;
 }
 
 .searchbar-icon {
@@ -65,7 +73,7 @@
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-left: 1px solid rgba(0, 0, 0, 0.08);
   border-right: none;
-  padding: 16px 8px;
+  padding: 16px 0px 16px 14px;
 }
 
 #searchterm {
