@@ -42,4 +42,4 @@ class RestaurantShow extends React.Component {
   }
 }
 
-export default withRouter(RestaurantShow);
+export default RestaurantShow;

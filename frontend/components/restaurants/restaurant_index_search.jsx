@@ -21,7 +21,6 @@ class RestaurantIndexSearch extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
     this.props.searchRestaurants(this.state.searchTerm).then(
       this.props.history.push('/restaurants')
     );

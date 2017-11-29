@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default ({key, id, name, city, state, country, cuisine, thumbnailUrl}) => {
+export default ({id, name, city, state, country, cuisine, thumbnailUrl}) => {
   const linkPath = "restaurants/" + id;
   return (
     <li className="restaurant-index-item">

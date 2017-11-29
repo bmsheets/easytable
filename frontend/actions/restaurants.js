@@ -32,6 +32,7 @@ export const fetchRestaurants = () => dispatch => {
 };
 
 export const fetchRestaurant = (restaurantId) => dispatch => {
+  console.log("calling fetchRestaurant action creator");
   return getRestaurant(restaurantId).then(
     restaurant => dispatch(receiveRestaurant(restaurant))
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import NavBar from './nav/nav_bar';
 import MainPage from './main/main_page';
 import RestaurantIndexContainer from './restaurants/restaurant_index_container';
@@ -10,10 +10,12 @@ import Footer from './footer/footer';
 export default() => (
   <div>
     <NavBar />
-    <Route exact path="/" component={MainPage} />
-    <Route exact path="/restaurants" component={RestaurantIndexContainer} />
-    <Route path="/restaurants/new" component={RestaurantFormContainer} />
-    <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+    <Switch>
+      <Route path="/restaurants/new" component={RestaurantFormContainer} />
+      <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+      <Route path="/restaurants" component={RestaurantIndexContainer} />
+      <Route path="/" component={MainPage} />
+    </Switch>
     <Footer />
   </div>
 );

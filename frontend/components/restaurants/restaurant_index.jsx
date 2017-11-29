@@ -10,10 +10,6 @@ class RestaurantIndex extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    // this.props.fetchRestaurants();
-  }
-
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });
