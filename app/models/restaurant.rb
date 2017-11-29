@@ -2,6 +2,8 @@ class Restaurant < ApplicationRecord
   validates :name, :city, :country, :capacity, :cuisine, presence: true
 
   has_many :reservations
+  has_many :favorites
+  has_many :reviews
 
   def self.search(search_term)
     Restaurant.where(

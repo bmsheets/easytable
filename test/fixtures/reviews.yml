@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  author_id: 1
+  restaurant_id: 1
+  body: MyText
+  food: 1
+  ambiance: 1
+  service: 1
+  value: 1
+
+two:
+  author_id: 1
+  restaurant_id: 1
+  body: MyText
+  food: 1
+  ambiance: 1
+  service: 1
+  value: 1
