@@ -1,4 +1,4 @@
-class Api::RestaurantsController < ApplicationController
+  class Api::RestaurantsController < ApplicationController
   INDEX_LIMIT = 10
 
   def create
@@ -36,6 +36,7 @@ class Api::RestaurantsController < ApplicationController
       :address,
       :phone_number,
       :zip_code,
-      :capacity)
+      :capacity,
+      :cuisine)
   end
 end
