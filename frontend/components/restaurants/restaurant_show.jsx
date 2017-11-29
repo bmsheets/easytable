@@ -22,6 +22,10 @@ class RestaurantShow extends React.Component {
     e.preventDefault();
   }
 
+  toggleFavorite(e) {
+
+  }
+
   render() {
     if (!this.props.restaurant) { return null; }
     return (
@@ -33,6 +37,9 @@ class RestaurantShow extends React.Component {
         <div className="restaurant-show-profile">
           <h1>{this.props.restaurant.name}</h1>
           <span>Rating</span>
+          <a className="favorite-button">
+            <i className="fa fa-heart-o fa-2" aria-hidden="true"></i>  Add to Favorites
+          </a>
         </div>
       </div>
       <div className="reservation-placeholder"></div>

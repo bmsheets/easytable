@@ -1,0 +1,16 @@
+.favorite-button {
+  color: white;
+  padding: 8px;
+  position: relative;
+  float: right;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  font-size: 10.8px;
+  font-family: $font-stack;
+  cursor: pointer;
+}
+
+.fa-heart-o {
+  padding: 0 5px;
+}

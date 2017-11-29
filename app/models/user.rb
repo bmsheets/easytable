@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   has_many :reservations
   has_many :favorites
-  has_many :reviews
+  has_many :reviews,
     primary_key: :id,
     foreign_key: :author_id,
     class_name: :Review

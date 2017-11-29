@@ -58,3 +58,19 @@ export const postReservation = (reservation) => {
     data: { reservation }
   });
 };
+
+export const postFavorite = (favorite) => {
+  return $.ajax({
+    url: '/api/favorites',
+    method: 'POST',
+    data: { favorite }
+  });
+};
+
+export const deleteFavorite = (favorite) => {
+  return $.ajax({
+    url: '/api/favorites',
+    method: 'DELETE',
+    data: { favorite }
+  });
+};
