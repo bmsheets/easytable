@@ -40,6 +40,14 @@ function defineUtils() {
     name: "Burger King",
     city: "Detroit",
     country: "Lithuania",
-    capacity: 9000
+    capacity: 9000,
+    cuisine: "Burgers"
+  };
+  window.createReservation = APIUtil.postReservation;
+  window.testReservation = {
+    user_id: 1,
+    restaurant_id: 1,
+    time: new Date().toString(),
+    num_guests: 2
   };
 }

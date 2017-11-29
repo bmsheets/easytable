@@ -50,3 +50,11 @@ export const postSearch = (searchTerm) => {
     data: { search_term: searchTerm }
   });
 };
+
+export const postReservation = (reservation) => {
+  return $.ajax({
+    url: '/api/reservations',
+    method: 'POST',
+    data: { reservation }
+  });
+};
