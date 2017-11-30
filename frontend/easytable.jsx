@@ -50,4 +50,14 @@ function defineUtils() {
     time: new Date().toString(),
     num_guests: 2
   };
+  window.createReview = APIUtil.postReview;
+  window.testReview = {
+    user_id: 3,
+    restaurant_id: 1,
+    body: "This is a test review",
+    food: 5,
+    service: 5,
+    ambiance: 5,
+    value: 5
+  };
 }

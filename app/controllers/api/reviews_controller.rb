@@ -1,8 +1,8 @@
 class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
-    @review.user_id = current_user.id
-    @review.restaurant_id = params[:id]
+    @review.author_id = current_user.id
+    puts "restaurant_id is: [#{@review.restaurant_id}]"
     if @review.save
       render :show
     else
@@ -11,7 +11,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find_by(user_id: current_user, restaurant_id: params[:id])
+    @review = Review.find_by(author_id: current_user.id, restaurant_id: params[:id])
     if @review.update_attributes(review_params)
       render :show
     else
@@ -20,13 +20,13 @@ class Api::ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find_by(user_id: current_user, restaurant_id: params[:id])
+    @review = Review.find_by(author_id: current_user.id, restaurant_id: params[:id])
     @review.destroy
     render :show
   end
 
   private
   def review_params
-    params.require(:review).permit(:body, :food, :ambiance, :service, :value)
+    params.require(:review).permit(:body, :food, :ambiance, :service, :value, :restaurant_id)
   end
 end

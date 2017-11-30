@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import ReviewFormContainer from '../reviews/review_form_container';
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class RestaurantShow extends React.Component {
 
   isFavorite() {
     const user = this.props.currentUser;
-    return user && user.favorites.some(
+    return user && user.favorites && user.favorites.some(
       favorite => (favorite.restaurant_id === this.props.restaurant.id)
     );
   }
@@ -74,6 +75,7 @@ class RestaurantShow extends React.Component {
         </div>
         <div className="reservation-placeholder"></div>
         <div className="restaurant-show-about"></div>
+        <ReviewFormContainer restaurant={this.props.restaurant}/>
       </div>
     );
   }

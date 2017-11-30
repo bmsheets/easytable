@@ -73,3 +73,26 @@ export const deleteFavorite = (id) => {
     method: 'DELETE'
   });
 };
+
+export const postReview = (review) => {
+  return $.ajax({
+    url: '/api/reviews',
+    method: 'POST',
+    data: { review }
+  });
+};
+
+export const patchReview = (review) => {
+  return $.ajax({
+    url: '/api/reviews/' + review.id,
+    method: 'PATCH',
+    data: { review }
+  });
+};
+
+export const deleteReview = (id) => {
+  return $.ajax({
+    url: '/api/reviews/' + id,
+    method: 'DELETE'
+  });
+};
