@@ -49,7 +49,7 @@ class RestaurantForm extends React.Component {
     return (
       <div className="restaurant-form-container">
         <form className="restaurant-form">
-          <h1>Restaurant Form</h1>
+          <h1>Grow Your Business with EasyTable</h1>
           { this.renderErrors() }
           <div className="restaurant-form-col-1">
             <input

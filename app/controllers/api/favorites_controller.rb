@@ -11,7 +11,7 @@ class Api::FavoritesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @favorite = Favorite.find_by(user_id: current_user, restaurant_id: params[:id])
     @favorite.destroy
     @restaurant = @favorite.restaurant
