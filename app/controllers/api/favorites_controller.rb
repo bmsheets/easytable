@@ -4,8 +4,8 @@ class Api::FavoritesController < ApplicationController
     @favorite.user_id = current_user.id
     @favorite.restaurant_id = params[:id]
     if @favorite.save
-      @restaurant = @favorite.restaurant
-      render 'api/restaurants/show'
+      @user = current_user
+      render 'api/users/show'
     else
       render json: @favorite.errors.full_messages, status: 401
     end
@@ -14,7 +14,7 @@ class Api::FavoritesController < ApplicationController
   def destroy
     @favorite = Favorite.find_by(user_id: current_user, restaurant_id: params[:id])
     @favorite.destroy
-    @restaurant = @favorite.restaurant
-    render 'api/restaurants/show'
+    @user = current_user
+    render 'api/users/show'
   end
 end

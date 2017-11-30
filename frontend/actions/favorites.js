@@ -1,14 +1,16 @@
 import { postFavorite, deleteFavorite } from '../utils/api_util';
-import { receiveRestaurant } from './restaurants';
+import { receiveCurrentUser } from './session';
+
+
 
 export const favoriteRestaurant = restaurantId => dispatch => {
   return postFavorite(restaurantId).then(
-    restaurant => dispatch(receiveRestaurant(restaurant))
+    user => dispatch(receiveCurrentUser(user))
   );
 };
 
 export const unfavoriteRestaurant = restaurantId => dispatch => {
   return deleteFavorite(restaurantId).then(
-    restaurant => dispatch(receiveRestaurant(restaurant))
+    user => dispatch(receiveCurrentUser(user))
   );
 };

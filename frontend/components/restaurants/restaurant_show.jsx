@@ -7,6 +7,7 @@ class RestaurantShow extends React.Component {
     this.state = this.props.restaurant;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleFavorite = this.toggleFavorite.bind(this);
+    this.isFavorite = this.isFavorite.bind(this);
   }
 
   componentDidMount() {
@@ -25,17 +26,27 @@ class RestaurantShow extends React.Component {
 
   toggleFavorite(e) {
     e.preventDefault();
-    if (!this.props.currentUser) { return; }
-    if (this.props.restaurant.likedByCurrentUser) {
+    if (!this.props.currentUser) {
+      this.props.openModal();
+      return;
+    }
+    if (this.isFavorite()) {
       this.props.unfavoriteRestaurant(this.props.restaurant.id);
     } else {
       this.props.favoriteRestaurant(this.props.restaurant.id);
     }
   }
 
+  isFavorite() {
+    const user = this.props.currentUser;
+    return user && user.favorites.some(
+      favorite => (favorite.restaurant_id === this.props.restaurant.id)
+    );
+  }
+
   render() {
     if (!this.props.restaurant) { return null; }
-    const favoriteButton = this.props.restaurant.likedByCurrentUser ? (
+    const favoriteButton = this.isFavorite() ? (
       <a className="favorite-button"
          onClick={ this.toggleFavorite }>
         <i className="fa fa-heart"

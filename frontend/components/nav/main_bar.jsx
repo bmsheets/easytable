@@ -52,10 +52,10 @@ class MainNav extends React.Component {
         </div>
       );
     } else {
-      const sessionForm = this.state.formType === "signin" ? (
-        <SigninContainer />
-      ) : (
+      const sessionForm = this.state.formType === "signup" ? (
         <SignupContainer />
+      ) : (
+        <SigninContainer />
       );
 
       authFeature = (
