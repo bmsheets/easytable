@@ -5,9 +5,9 @@ class ReservationFinder extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      partySize: '',
-      date: '',
-      time: '',
+      partySize: 1,
+      date: new Date().toDateString(),
+      time: '4:30PM',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -31,7 +31,7 @@ class ReservationFinder extends React.Component {
 
   generatePartySizes() {
     const partySizes = [];
-    partySizes.push(<option key="1" value="1">1 person</option>);
+    partySizes.push(<option selected="selected" key="1" value="1">1 person</option>);
     for (let i = 2; i < 21; i++) {
       partySizes.push(<option key={i} value={i}>{i} people</option>);
     }
@@ -41,10 +41,10 @@ class ReservationFinder extends React.Component {
 
   generateReservationTimes() {
     const reservationTimes = [];
-    reservationTimes.push(<option key="1" value={undefined}>4:30 PM</option>);
+    reservationTimes.push(<option selected="selected" key="1" value={"4:30PM"}>4:30 PM</option>);
     for (let i = 2, hour = 5; hour < 12; i += 2, hour++) {
-      reservationTimes.push(<option key={i} value={undefined}>{hour}:00 PM </option>);
-      reservationTimes.push(<option key={i + 1} value={undefined}>{hour}:30 PM </option>);
+      reservationTimes.push(<option key={i} value={hour + ":00PM"}>{hour}:00 PM </option>);
+      reservationTimes.push(<option key={i + 1} value={hour + ":30PM"}>{hour}:30 PM </option>);
     }
     return reservationTimes;
   }

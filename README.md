@@ -1,7 +1,8 @@
-# README
+# EasyTable
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Easytable Live](https://easytable.herokuapp.com/)
+
+EasyTable is
 
 Things you may want to cover:
 
