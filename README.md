@@ -29,6 +29,13 @@ reservation is as simple as a few clicks.
 
 ![](images/reservation.png)
 
+### Reviews
+
+EasyTable users once logged in can write reviews of restaurants they've eaten at.
+
+
+![](images/reviews.png)
+
 ## Upcoming Changes
 * Styling enhancements
 * Shortcut buttons for reservations in restaurant index
