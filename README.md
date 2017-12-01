@@ -2,8 +2,8 @@
 
 [Easytable Live](https://easytable.herokuapp.com/)
 
-![](banner.png)
+![](images/banner.png)
 
-![](search2.png)
+![](images/search2.png)
 
-![](reservation.png)
+![](images/reservation.png)
