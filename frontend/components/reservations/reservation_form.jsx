@@ -4,9 +4,18 @@ class ReservationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      partySize: 2,
+      date: new Date().toDateString(),
+      time: "6:00PM",
+      booked: false
     };
+    if (this.props.location) {
+      // console.log("location.state", this.props.location.state);
+      this.state = this.props.location.state;
+      this.state.booked = false;
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.generateReservation = this.generateReservation.bind(this);
   }
 
   componentDidMount() {
@@ -21,6 +30,30 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    if (!this.props.currentUser) {
+      this.props.openModal();
+    } else {
+      this.props.createReservation(this.generateReservation()).then(
+        () => {
+          this.setState({ booked: true });
+          // console.log("Reservation booked. booked value: ", this.state.booked);
+        }
+      );
+    }
+  }
+
+  generateReservation() {
+    const time = new Date(this.state.date);
+    time.setHours(12 + parseInt(this.state.time.split(":")[0]));
+    time.setMinutes(parseInt(this.state.time.split(":")[1].slice(0, 2)));
+    const restaurantId = this.props.restaurant.id;
+    const reservation = {
+      user_id: this.props.currentUser.id,
+      restaurant_id: restaurantId,
+      num_guests: this.state.partySize,
+      time: time.toString()
+    };
+    return reservation;
   }
 
   render() {
@@ -28,23 +61,29 @@ class ReservationForm extends React.Component {
     if (!restaurant) { return null; }
     let user = this.props.currentUser;
     if (!user) { user = { email: "user@email.com" }; }
-    console.log("user is: ", user);
+    let banner;
+    if (this.state.booked) {
+      banner = (<h1>Reservation booked.</h1>);
+    } else {
+      banner = (<h1>You're Almost Done!</h1>);
+    }
+
     return (
       <div className="reservation-form-page">
-        <h1>You're Almost Done!</h1>
+        { banner }
         <div className="reservation-info">
           <div className="reservation-info-thumbnail"></div>
           <div className="reservation-info-block">
             <h2>GUESTS</h2>
-            <h4>1 person</h4>
+            <h4>{this.state.partySize}</h4>
           </div>
           <div className="reservation-info-block">
             <h2>DATE</h2>
-            <h4>Friday, December 1, 2017</h4>
+            <h4>{this.state.date}</h4>
           </div>
           <div className="reservation-info-block">
             <h2>TIME</h2>
-            <h4>6:00PM</h4>
+            <h4>{this.state.time}</h4>
           </div>
           <div className="reservation-info-block">
             <h2>RESTAURANT</h2>

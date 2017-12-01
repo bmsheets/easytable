@@ -96,7 +96,7 @@ class RestaurantShow extends React.Component {
             { favoriteButton }
           </div>
         </div>
-        <ReservationFinderContainer />
+        <ReservationFinderContainer restaurant={this.props.restaurant}/>
         <div className="restaurant-show-about"></div>
         <div className="reviews-container">
           <h1 className="reviews-header">Reviews</h1>

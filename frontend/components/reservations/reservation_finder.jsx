@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Route, withRouter } from 'react-router-dom';
 
 class ReservationFinder extends React.Component {
   constructor(props) {
@@ -19,7 +20,9 @@ class ReservationFinder extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("reservation-finder-state: ", this.state);
+    this.props.history.push(
+      this.props.match.url + '/reservations/new'
+    );
   }
 
   renderReservationButtons() {
@@ -47,6 +50,7 @@ class ReservationFinder extends React.Component {
   }
 
   render() {
+    if (!this.props.restaurant) { return null; }
     return (
       <div className="reservation-finder">
         <h1>Make a reservation</h1>
@@ -69,9 +73,12 @@ class ReservationFinder extends React.Component {
               onChange={this.handleInput('time')}>
               {this.generateReservationTimes()}
             </select>
-            <button
-              className="reservation-finder-button"
-              onClick={this.handleSubmit}>Find a Table</button>
+            <Link
+              to={{
+                pathname: `/restaurants/${this.props.restaurant.id}/reservations/new`,
+                state: this.state
+              }}
+              className="reservation-finder-button">Find a Table</Link>
           </div>
           <div className="reservation-finder-row-2">
             { this.renderReservationButtons() }
@@ -82,4 +89,4 @@ class ReservationFinder extends React.Component {
   }
 }
 
-export default ReservationFinder;
+export default withRouter(ReservationFinder);
