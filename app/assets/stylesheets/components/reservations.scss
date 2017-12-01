@@ -1,0 +1,56 @@
+.reservation-finder {
+  display: block;
+  max-width: 1060px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
+}
+
+.reservation-finder-form {
+  padding: 40px 25px;
+}
+
+.reservation-finder h1 {
+  padding: 25px;
+  font-size: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.reservation-finder-button {
+  background-color: $red;
+  color: white;
+  border-radius: 3px;
+  padding: 14px 28px;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 16px;
+  width: 25%;
+  text-align: center;
+  transition: background-color 300ms ease-out;
+}
+
+.reservation-finder-button:hover {
+  background-color: $red-hover;
+}
+
+.reservation-finder-row-1 {
+  height: 46px;
+}
+
+.reservation-finder-partysize,
+.reservation-finder-time,
+.reservation-finder-date {
+  background-color: white;
+  width: 25%;
+  font-family: $font-stack;
+  font-size: 16px;
+  color: rgb(51, 51, 51);
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-right: none;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  padding-left: 20px;
+}

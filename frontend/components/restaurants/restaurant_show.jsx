@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ReviewFormContainer from '../reviews/review_form_container';
+import ReservationFinderContainer from '../reservations/reservation_finder_container';
 import Review from '../reviews/review';
 
 class RestaurantShow extends React.Component {
@@ -95,7 +96,7 @@ class RestaurantShow extends React.Component {
             { favoriteButton }
           </div>
         </div>
-        <div className="reservation-placeholder"></div>
+        <ReservationFinderContainer />
         <div className="restaurant-show-about"></div>
         <div className="reviews-container">
           <h1 className="reviews-header">Reviews</h1>
