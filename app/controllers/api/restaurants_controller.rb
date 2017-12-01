@@ -25,6 +25,12 @@
     render :index
   end
 
+  def reviews
+    puts params
+    @reviews = Restaurant.find(params[:restaurant_id]).reviews
+    render 'api/reviews/index'
+  end
+
   private
   def restaurant_params
     params.require(:restaurant)

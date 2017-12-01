@@ -1,18 +1,25 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ReviewFormContainer from '../reviews/review_form_container';
+import Review from '../reviews/review';
 
 class RestaurantShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.restaurant;
+    this.state = {
+      restaurant: this.props.restaurant,
+      reviews: this.props.reviews
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleFavorite = this.toggleFavorite.bind(this);
     this.isFavorite = this.isFavorite.bind(this);
+    this.renderReviews = this.renderReviews.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchRestaurant(this.props.match.params.restaurantId);
+    console.log("fetching reviews with id: ", this.props.match.params.restaurantId);
+    this.props.fetchReviewsByRestaurant(this.props.match.params.restaurantId);
   }
 
   handleInput(type) {
@@ -45,6 +52,21 @@ class RestaurantShow extends React.Component {
     );
   }
 
+  averageRating(review) {
+    return Math.round(
+      (review.food + review.ambiance + review.service + review.value) / 4
+    );
+  }
+
+  renderReviews() {
+    return this.props.reviews.map((review, idx) => (
+      <Review
+        key={idx}
+        body={review.body}
+        rating={this.averageRating(review)} />
+    ));
+  }
+
   render() {
     if (!this.props.restaurant) { return null; }
     const favoriteButton = this.isFavorite() ? (
@@ -65,7 +87,7 @@ class RestaurantShow extends React.Component {
       <div className="restaurant-show">
         <div className="restaurant-show-header">
           <div className="restaurant-show-banner"/>
-            <a className="restaurant-index-item-thumbnail"
+            <a className="restaurant-show-thumbnail"
               style={{backgroundImage: `url(${this.props.restaurant.thumbnailUrl})`}}></a>
           <div className="restaurant-show-profile">
             <h1>{this.props.restaurant.name}</h1>
@@ -75,6 +97,10 @@ class RestaurantShow extends React.Component {
         </div>
         <div className="reservation-placeholder"></div>
         <div className="restaurant-show-about"></div>
+        <div className="reviews-container">
+          <h1 className="reviews-header">Reviews</h1>
+          { this.renderReviews() }
+        </div>
         <ReviewFormContainer restaurant={this.props.restaurant}/>
       </div>
     );

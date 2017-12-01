@@ -1,4 +1,4 @@
-import { postReview, patchReview, deleteReview } from '../utils/api_util';
+import { postReview, patchReview, deleteReview, getReviewsByRestaurant } from '../utils/api_util';
 
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
@@ -40,5 +40,11 @@ export const updateReview = (formData) => dispatch => {
 export const destroyReview = (id) => dispatch => {
   return deleteReview(id).then(
     review => dispatch(removeReview(review)),
+    err => dispatch(receiveReviewErrors(err.responseJSON)));
+};
+
+export const fetchReviewsByRestaurant = (restaurantId) => dispatch => {
+  return getReviewsByRestaurant(restaurantId).then(
+    reviews => dispatch(receiveReviews(reviews)),
     err => dispatch(receiveReviewErrors(err.responseJSON)));
 };

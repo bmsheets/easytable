@@ -1,0 +1,72 @@
+.reviews-container,
+.review-form-container {
+  display: block;
+  max-width: 1060px;
+  background: white;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 4px;
+  margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
+}
+
+.reviews-header {
+  padding: 25px;
+  font-size: 24px;
+}
+
+.review {
+  padding: 25px;
+  overflow: auto;
+}
+
+.review-body {
+
+}
+
+.review-rating {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.review-form-container {
+
+}
+
+.review-form {
+  padding: 40px 25px;
+}
+
+.review-form-body {
+  width: 100%;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.review-form-row-2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.review-form-rating {
+  height: 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  width: 20%;
+  border: 1px solid rgba(0, 0, 0, 0.08)
+}
+
+.review-form-button {
+  background-color: $red;
+  color: white;
+  border-radius: 3px;
+  padding: 8px 16px;
+  transition: background-color 300ms ease-out;
+}
+
+.review-form-button:hover {
+  background-color: $red-hover;
+}

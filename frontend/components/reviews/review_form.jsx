@@ -6,10 +6,10 @@ class ReviewForm extends React.Component {
     super(props);
     this.state = {
       body: '',
-      food: 0,
-      ambiance: 0,
-      service: 0,
-      value: 0,
+      food: '',
+      ambiance: '',
+      service: '',
+      value: '',
       restaurant_id: this.props.restaurant.id
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,35 +23,43 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("creating review with: ", this.state);
     this.props.createReview(this.state);
   }
 
   render() {
     return (
-      <div>
-        <form>
+      <div className="review-form-container">
+        <form className="review-form">
           <textarea
+            className="review-form-body"
             value={this.state.body}
             onChange={this.handleInput('body')}
             placeholder="Your Review Here"></textarea>
-          <input
-            value={this.state.food}
-            onChange={this.handleInput('food')}
-            placeholder="Food"></input>
-          <input
-            value={this.state.ambiance}
-            onChange={this.handleInput('ambiance')}
-            placeholder="Ambiance"></input>
-          <input
-            value={this.state.service}
-            onChange={this.handleInput('service')}
-            placeholder="Service"></input>
-          <input
-            value={this.state.value}
-            onChange={this.handleInput('value')}
-            placeholder="Value"></input>
-          <button onClick={this.handleSubmit}>Submit Review</button>
+          <div className="review-form-row-2">
+            <input
+              className="review-form-rating"
+              value={this.state.food}
+              onChange={this.handleInput('food')}
+              placeholder="Food (0 to 5)"></input>
+            <input
+              className="review-form-rating"
+              value={this.state.ambiance}
+              onChange={this.handleInput('ambiance')}
+              placeholder="Ambiance (0 to 5)"></input>
+            <input
+              className="review-form-rating"
+              value={this.state.service}
+              onChange={this.handleInput('service')}
+              placeholder="Service (0 to 5)"></input>
+            <input
+              className="review-form-rating"
+              value={this.state.value}
+              onChange={this.handleInput('value')}
+              placeholder="Value (0 to 5)"></input>
+            <button
+              className="review-form-button"
+              onClick={this.handleSubmit}>Submit Review</button>
+          </div>
         </form>
       </div>
     );

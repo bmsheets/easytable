@@ -96,3 +96,11 @@ export const deleteReview = (id) => {
     method: 'DELETE'
   });
 };
+
+export const getReviewsByRestaurant = (id) => {
+  console.log("getReviewsByRestaurant called with id: ", id);
+  return $.ajax({
+    url: '/api/restaurants/' + id + '/reviews',
+    method: 'GET'
+  });
+};
