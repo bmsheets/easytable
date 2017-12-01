@@ -12,11 +12,13 @@
 .reviews-header {
   padding: 25px;
   font-size: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .review {
   padding: 25px;
   overflow: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .review-body {

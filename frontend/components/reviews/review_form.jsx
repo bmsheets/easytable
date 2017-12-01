@@ -23,13 +23,30 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createReview(this.state);
+    if (this.props.currentUser) {
+      this.props.createReview(this.state);
+    } else {
+      this.props.openModal();
+    }
+  }
+
+  renderErrors() {
+    return (
+      <ul className="errors-list">
+        {this.props.errors.map((error, idx) => (
+          <li className="error" key={idx}>{error}</li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
     return (
       <div className="review-form-container">
         <form className="review-form">
+          <ul>
+            {this.renderErrors()}
+          </ul>
           <textarea
             className="review-form-body"
             value={this.state.body}
