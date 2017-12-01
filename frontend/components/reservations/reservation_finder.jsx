@@ -19,6 +19,7 @@ class ReservationFinder extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log("reservation-finder-state: ", this.state);
   }
 
   renderReservationButtons() {

@@ -19,6 +19,7 @@
 }
 
 .reservation-finder-button {
+  height: 46px;
   background-color: $red;
   color: white;
   border-radius: 3px;
@@ -53,4 +54,90 @@
   box-sizing: border-box;
   vertical-align: bottom;
   padding-left: 20px;
+}
+
+.reservation-form-page h1 {
+  padding: 36px 20px;
+  font-size: 36px;
+  background: white;
+  margin-bottom: 40px;
+  border-top: 1px solid rgba(0,0,0,.08);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
+}
+
+.reservation-form {
+
+}
+
+.reservation-info {
+  width: 1208px;
+  background: white;
+  display: flex;
+  padding: 24px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 0px 0px;
+  margin-bottom: 80px;
+}
+
+.reservation-info-thumbnail {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  margin-top: 8px;
+  margin-right: 32px;
+}
+
+.reservation-info-block {
+  margin-top: 8px;
+  margin-right: 32px;
+}
+
+.reservation-info-block h2 {
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.reservation-info-block h4 {
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+
+.reservation-form {
+  width: 800px;
+  padding: 0 16px;
+}
+
+.reservation-form input,
+.reservation-form select {
+  background: white;
+  width: 48%;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.reservation-form select {
+  vertical-align: bottom;
+  height: 54px;
+  font-size: 16px;
+  color: $dark-gray;
+  font-family: $font-stack;
+}
+
+.reservation-form button {
+  color: white;
+  background-color: $red;
+  padding: 14px 28px;
+  border-radius: 3px;
+  transition: background-color 300ms ease-out;
+}
+
+.reservation-form button:hover {
+  background-color: $red-hover;
 }
