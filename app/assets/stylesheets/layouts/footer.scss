@@ -10,12 +10,16 @@
   justify-content: space-around;
   height: 160px;
   padding: 45px 0px;
-  text-align: center;
+  text-align: left;
 }
 
 .footer-box-1,
 .footer-box-2 {
   width: 25%;
+}
+
+.footer-box-2 span {
+  margin-left: 34px;
 }
 
 div[class^="footer-box-"] span {
@@ -24,6 +28,10 @@ div[class^="footer-box-"] span {
   font-size: 18px;
   font-weight: 600px;
   margin-bottom: 20px;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
 }
 
 .footer-bar {
