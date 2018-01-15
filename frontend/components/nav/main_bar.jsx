@@ -78,7 +78,6 @@ class MainNav extends React.Component {
         <div className="logo-links">
           <i className="fa fa-circle-o fa-2x"></i>
           <Link className="company-name" to="/" replace>EasyTable</Link>
-          <a className="location-dropdown">Choose your location</a>
         </div>
         { authFeature }
       </div>

@@ -6,9 +6,6 @@ export default () => {
     <div className="bar utility-bar">
       <div className="utility-links">
         <Link to="/restaurants/new">For Restaurateurs</Link>
-        <a>Mobile</a>
-        <a>Help</a>
-        <a>EN</a>
       </div>
    </div>
   );
