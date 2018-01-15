@@ -69,13 +69,13 @@ class RestaurantForm extends React.Component {
             <input
               type="text"
               value={this.state.state}
-              placeholder="State/Province *"
+              placeholder="State/Province"
               onChange={this.handleInput('state')}>
             </input>
             <input
               type="text"
               value={this.state.zip_code}
-              placeholder="Zip/Postal Code *"
+              placeholder="Zip/Postal Code"
               onChange={this.handleInput('zip_code')}>
             </input>
             <input
@@ -89,13 +89,13 @@ class RestaurantForm extends React.Component {
             <input
               type="text"
               value={this.state.address}
-              placeholder="Address *"
+              placeholder="Address"
               onChange={this.handleInput('address')}>
             </input>
             <input
               type="text"
               value={this.state.phone_number}
-              placeholder="Phone Number *"
+              placeholder="Phone Number"
               onChange={this.handleInput('phone_number')}>
             </input>
           </div>
