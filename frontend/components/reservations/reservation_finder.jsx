@@ -7,7 +7,7 @@ class ReservationFinder extends React.Component {
     this.state = {
       partySize: 1,
       date: new Date().toDateString(),
-      time: '4:30PM',
+      time: '6:00 AM',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }

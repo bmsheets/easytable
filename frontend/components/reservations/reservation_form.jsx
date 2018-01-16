@@ -6,7 +6,7 @@ class ReservationForm extends React.Component {
     this.state = {
       partySize: 2,
       date: new Date().toDateString(),
-      time: "6:00PM",
+      time: "6:00 PM",
       booked: false
     };
     if (this.props.location) {
@@ -72,7 +72,8 @@ class ReservationForm extends React.Component {
       <div className="reservation-form-page">
         { banner }
         <div className="reservation-info">
-          <div className="reservation-info-thumbnail"></div>
+          <div className="reservation-info-thumbnail"
+            style={{backgroundImage: `url(${this.props.restaurant.thumbnailUrl})`}}></div>
           <div className="reservation-info-block">
             <h2>GUESTS</h2>
             <h4>{this.state.partySize}</h4>
