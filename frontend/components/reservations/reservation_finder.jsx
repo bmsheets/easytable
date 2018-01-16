@@ -40,12 +40,17 @@ class ReservationFinder extends React.Component {
   }
 
   generateReservationTimes() {
-    const reservationTimes = [];
-    reservationTimes.push(<option selected="selected" key="1" value={"4:30PM"}>4:30 PM</option>);
-    for (let i = 2, hour = 5; hour < 12; i += 2, hour++) {
-      reservationTimes.push(<option key={i} value={hour + ":00PM"}>{hour}:00 PM </option>);
-      reservationTimes.push(<option key={i + 1} value={hour + ":30PM"}>{hour}:30 PM </option>);
+    const times = [];
+    for (let hour = 6; hour < 12; hour++) {
+      times.push(hour + ":00 AM", hour + ":30 AM");
     }
+    times.push("12:00 PM", "12:30 PM");
+    for (let hour = 1; hour < 12; hour++) {
+      times.push(hour + ":00 PM", hour + ":30 PM");
+    }
+    const reservationTimes = times.map((time, idx) => {
+      return (<option key={idx} value={undefined}>{time}</option>);
+    });
     return reservationTimes;
   }
 
