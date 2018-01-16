@@ -47,13 +47,24 @@
 }
 
 .restaurant-index-item-row-5 {
+  margin-top: 6px;
+}
+
+.view-reservations-button {
   font-weight: 600;
   font-size: 0.875rem;
   color: white;
   line-height: 1.2rem;
-  padding: .3em .2em;
+  padding: 6px 12px;
   background-color: $red;
   border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.view-reservations-button:hover {
+  background-color: $red-hover;
+  transition: background-color ease-in 300ms;
 }
 
 div[class=".restaurant-index-item-row-"] {

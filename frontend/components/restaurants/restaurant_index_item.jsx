@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Button } from 'react-router-dom';
 
 export default ({id, name, city, state, country, cuisine, thumbnailUrl}) => {
   const linkPath = "restaurants/" + id;
@@ -16,19 +16,23 @@ export default ({id, name, city, state, country, cuisine, thumbnailUrl}) => {
           {name}
         </Link>
         <div className="restaurant-index-item-row-1">
-          city: {city}
+          City: {city}
         </div>
         <div className="restaurant-index-item-row-2">
-          state: {state}
+          State: {state}
         </div>
         <div className="restaurant-index-item-row-3">
-          country: {country}
+          Country: {country}
         </div>
         <div className="restaurant-index-item-row-4">
-          cuisine: {cuisine}
+          Cuisine: {cuisine}
         </div>
         <div className="restaurant-index-item-row-5">
-          reservations
+          <Link
+            className="view-reservations-button"
+            to={linkPath}>
+            View Reservations
+          </Link>
         </div>
       </div>
     </li>

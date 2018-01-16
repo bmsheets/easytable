@@ -67,13 +67,13 @@ class Signup extends React.Component {
         <input
           type="text"
           value={this.state.first_name}
-          placeholder="First Name *"
+          placeholder="First Name"
           onChange={this.handleInput('first_name')}>
         </input>
         <input
           type="text"
           value={this.state.last_name}
-          placeholder="Last Name *"
+          placeholder="Last Name"
           onChange={this.handleInput('last_name')}>
         </input>
         <input
