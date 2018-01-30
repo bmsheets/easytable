@@ -1,5 +1,4 @@
-[
-  {"name":"Morningside Kitchen","cuisine":"American","city":"Atlanta","state":"Georgia","country":"United States","capacity":100},
+[{"name":"Morningside Kitchen","cuisine":"American","city":"Atlanta","state":"Georgia","country":"United States","capacity":100},
   {"name":"The General Muir","cuisine":"American","city":"Atlanta","state":"Georgia","country":"United States","capacity":100},
   {"name":"Ecco","cuisine":"European","city":"Atlanta","state":"Georgia","country":"United States","capacity":100},
   {"name":"Chris's Pizza","cuisine":"European","city":"Atlanta","state":"Georgia","country":"United States","capacity":100},
@@ -9,7 +8,6 @@
   {"name":"Murphy's","cuisine":"American","city":"Atlanta","state":"Georgia","country":"United States","capacity":100},
   {"name":"South City Kitchen Buckhead","cuisine":"Southern","city":"Atlanta","state":"Georgia","country":"United States","capacity":100},
   {"name":"St. Cecilia","cuisine":"Mediterranean","city":"Atlanta","state":"Georgia","country":"United States","capacity":100},
-
   {"name":"Alden and Harlow","cuisine":"American","city":"Boston","state":"Massachusetts","country":"United States","capacity":100},
   {"name":"Select Oyster Bar","cuisine":"Seafood","city":"Boston","state":"Massachusetts","country":"United States","capacity":100},
   {"name":"Les Sablons","cuisine":"French","city":"Boston","state":"Massachusetts","country":"United States","capacity":100},
@@ -20,7 +18,6 @@
   {"name":"Railstop Restaurant & Bar","cuisine":"American","city":"Boston","state":"Massachusetts","country":"United States","capacity":100},
   {"name":"The Red House Restaurant","cuisine":"European","city":"Boston","state":"Massachusetts","country":"United States","capacity":100},
   {"name":"Waypoint","cuisine":"Seafood","city":"Boston","state":"Massachusetts","country":"United States","capacity":100},
-
   {"name":"Emilio's Tapas","cuisine":"Tapas","city":"Chicago","state":"Illinois","country":"United States","capacity":100},
   {"name":"Gibson's Bar & Steakhouse","cuisine":"Steak","city":"Chicago","state":"Illinois","country":"United States","capacity":100},
   {"name":"Antico Posto","cuisine":"Italian","city":"Chicago","state":"Illinois","country":"United States","capacity":100},
@@ -31,7 +28,6 @@
   {"name":"Kama Bistro","cuisine":"Indian","city":"Chicago","state":"Illinois","country":"United States","capacity":100},
   {"name":"Francesca's Amici","cuisine":"Italian","city":"Chicago","state":"Illinois","country":"United States","capacity":100},
   {"name":"El Tapeo","cuisine":"Spanish","city":"Chicago","state":"Illinois","country":"United States","capacity":100},
-
   {"name":"Neighborhood Services","cuisine":"American","city":"Dallas","state":"Texas","country":"United States","capacity":100},
   {"name":"Pappas Bros. Steakhouse","cuisine":"Steak","city":"Dallas","state":"Texas","country":"United States","capacity":100},
   {"name":"Shinsei Restaurant","cuisine":"Japanese","city":"Dallas","state":"Texas","country":"United States","capacity":100},
@@ -41,9 +37,7 @@
   {"name":"Montlake Cut","cuisine":"Seafood","city":"Dallas","state":"Texas","country":"United States","capacity":100},
   {"name":"Al Biernat's","cuisine":"Steak","city":"Dallas","state":"Texas","country":"United States","capacity":100},
   {"name":"Sprezza","cuisine":"Italian","city":"Dallas","state":"Texas","country":"United States","capacity":100},
-  {"name":"Le Bilboquet","cuisine":"French","city":"Dallas","state":"Texas","country":"United States","capacity":100},
-
-  {"name":"Izakaya Den","cuisine":"Japanese","city":"Denver","state":"Colorado","country":"United States","capacity":100},
+  {"name":"Le Bilboquet","cuisine":"French","city":"Dallas","state":"Texas","country":"United States","capacity":100},  {"name":"Izakaya Den","cuisine":"Japanese","city":"Denver","state":"Colorado","country":"United States","capacity":100},
   {"name":"El Five","cuisine":"Mediterranean","city":"Denver","state":"Colorado","country":"United States","capacity":100},
   {"name":"Beatrice & Woodsley","cuisine":"American","city":"Denver","state":"Colorado","country":"United States","capacity":100},
   {"name":"Ocean Prime","cuisine":"Seafood","city":"Denver","state":"Colorado","country":"United States","capacity":100},
@@ -53,7 +47,6 @@
   {"name":"Tupelo Honey","cuisine":"Southern","city":"Denver","state":"Colorado","country":"United States","capacity":100},
   {"name":"Matsuhisa","cuisine":"Japanese","city":"Denver","state":"Colorado","country":"United States","capacity":100},
   {"name":"Mizuna","cuisine":"French","city":"Denver","state":"Colorado","country":"United States","capacity":100},
-
   {"name":"Cameron's Steakhouse","cuisine":"Steak","city":"Detroit","state":"Michigan","country":"United States","capacity":100},
   {"name":"Social Kitchen and Bar","cuisine":"American","city":"Detroit","state":"Michigan","country":"United States","capacity":100},
   {"name":"Phoenicia","cuisine":"Middle Eastern","city":"Detroit","state":"Michigan","country":"United States","capacity":100},
@@ -64,7 +57,6 @@
   {"name":"Andiamo Bloomfield","cuisine":"Italian","city":"Detroit","state":"Michigan","country":"United States","capacity":100},
   {"name":"Mandaloun Bistro","cuisine":"Lebanese","city":"Detroit","state":"Michigan","country":"United States","capacity":100},
   {"name":"Eddie V's","cuisine":"Seafood","city":"Detroit","state":"Michigan","country":"United States","capacity":100},
-
   {"name":"Etoile Cuisine Et Bar","cuisine":"French","city":"Houston","state":"Texas","country":"United States","capacity":100},
   {"name":"McCormick & Schmick's Seafood","cuisine":"Seafood","city":"Houston","state":"Texas","country":"United States","capacity":100},
   {"name":"Uptown Sushi","cuisine":"Japanese","city":"Houston","state":"Texas","country":"United States","capacity":100},
@@ -75,7 +67,6 @@
   {"name":"Yauatcha","cuisine":"Chinese","city":"Houston","state":"Texas","country":"United States","capacity":100},
   {"name":"Roka Akor","cuisine":"Steak","city":"Houston","state":"Texas","country":"United States","capacity":100},
   {"name":"Eloise Nichols Grill","cuisine":"American","city":"Houston","state":"Texas","country":"United States","capacity":100},
-
   {"name":"Fogo de Chao Brazilian Steakhouse","cuisine":"Steak","city":"Indianapolis","state":"Indiana","country":"United States","capacity":100},
   {"name":"Union 50","cuisine":"American","city":"Indianapolis","state":"Indiana","country":"United States","capacity":100},
   {"name":"Meridian","cuisine":"American","city":"Indianapolis","state":"Indiana","country":"United States","capacity":100},
@@ -86,7 +77,6 @@
   {"name":"Palomino","cuisine":"American","city":"Indianapolis","state":"Indiana","country":"United States","capacity":100},
   {"name":"McCormick & Schmick's Seafood","cuisine":"Seafood","city":"Indianapolis","state":"Indiana","country":"United States","capacity":100},
   {"name":"Rathskeller Restaurant","cuisine":"German","city":"Indianapolis","state":"Indiana","country":"United States","capacity":100},
-
   {"name":"Joe's Seafood, Prime Steak & Stone Crab","cuisine":"Southern","city":"Las Vegas","state":"Nevada","country":"United States","capacity":100},
   {"name":"Bouchon at The Venetian","cuisine":"French","city":"Las Vegas","state":"Nevada","country":"United States","capacity":100},
   {"name":"Tao Restaurant and Nightclub","cuisine":"Japanese","city":"Las Vegas","state":"Nevada","country":"United States","capacity":100},
@@ -97,7 +87,6 @@
   {"name":"Chica Las Vegas","cuisine":"Latin American","city":"Las Vegas","state":"Nevada","country":"United States","capacity":100},
   {"name":"Aquaknox","cuisine":"Seafood","city":"Las Vegas","state":"Nevada","country":"United States","capacity":100},
   {"name":"Maggiano's","cuisine":"Italian","city":"Las Vegas","state":"Nevada","country":"United States","capacity":100},
-
   {"name":"Border Grill","cuisine":"Mexican","city":"Los Angeles","state":"California","country":"United States","capacity":100},
   {"name":"Perch LA","cuisine":"French","city":"Los Angeles","state":"California","country":"United States","capacity":100},
   {"name":"Otium","cuisine":"American","city":"Los Angeles","state":"California","country":"United States","capacity":100},
@@ -108,7 +97,6 @@
   {"name":"Cleo LA LIVE","cuisine":"Mediterranean","city":"Los Angeles","state":"California","country":"United States","capacity":100},
   {"name":"Republique","cuisine":"French","city":"Los Angeles","state":"California","country":"United States","capacity":100},
   {"name":"The Palm","cuisine":"Steak","city":"Los Angeles","state":"California","country":"United States","capacity":100},
-
   {"name":"GG's Waterfront Barr & Grill","cuisine":"Seafood","city":"Miami","state":"Florida","country":"United States","capacity":100},
   {"name":"Monikitail","cuisine":"Japanese","city":"Miami","state":"Florida","country":"United States","capacity":100},
   {"name":"Lola's on Harrison","cuisine":"American","city":"Miami","state":"Florida","country":"United States","capacity":100},
@@ -119,7 +107,6 @@
   {"name":"Bourbon Steak","cuisine":"American","city":"Miami","state":"Florida","country":"United States","capacity":100},
   {"name":"Boatyard","cuisine":"Seafood","city":"Miami","state":"Florida","country":"United States","capacity":100},
   {"name":"YOLO","cuisine":"American","city":"Miami","state":"Florida","country":"United States","capacity":100},
-
   {"name":"Ristorante Bartolotta","cuisine":"Italian","city":"Milwaukee","state":"Wisconsin","country":"United States","capacity":100},
   {"name":"Five O'Clock Steakhouse","cuisine":"Steak","city":"Milwaukee","state":"Wisconsin","country":"United States","capacity":100},
   {"name":"Harbor House","cuisine":"Seafood","city":"Milwaukee","state":"Wisconsin","country":"United States","capacity":100},
@@ -130,7 +117,6 @@
   {"name":"Zarletti","cuisine":"Italian","city":"Milwaukee","state":"Wisconsin","country":"United States","capacity":100},
   {"name":"Rumpus Room","cuisine":"American","city":"Milwaukee","state":"Wisconsin","country":"United States","capacity":100},
   {"name":"Screaming Tuna","cuisine":"Sushi","city":"Milwaukee","state":"Wisconsin","country":"United States","capacity":100},
-
   {"name":"Smoke Jazz and Supper Club","cuisine":"American","city":"New York","state":"New York","country":"United States","capacity":100},
   {"name":"Henry's Restaurant","cuisine":"American","city":"New York","state":"New York","country":"United States","capacity":100},
   {"name":"Marea","cuisine":"Italian","city":"New York","state":"New York","country":"United States","capacity":100},
@@ -141,7 +127,6 @@
   {"name":"Nobu Fifty Seven","cuisine":"Japanese","city":"New York","state":"New York","country":"United States","capacity":100},
   {"name":"Upland","cuisine":"American","city":"New York","state":"New York","country":"United States","capacity":100},
   {"name":"Jean-Georges","cuisine":"French","city":"New York","state":"New York","country":"United States","capacity":100},
-
   {"name":"The Boheme","cuisine":"European","city":"Orlando","state":"Florida","country":"United States","capacity":100},
   {"name":"KRES Chophouse","cuisine":"Steak","city":"Orlando","state":"Florida","country":"United States","capacity":100},
   {"name":"Shari Sushi Lounge","cuisine":"Sushi","city":"Orlando","state":"Florida","country":"United States","capacity":100},
@@ -152,7 +137,6 @@
   {"name":"Emeril's Restaurant","cuisine":"Creole","city":"Orlando","state":"Florida","country":"United States","capacity":100},
   {"name":"Seasons 52","cuisine":"American","city":"Orlando","state":"Florida","country":"United States","capacity":100},
   {"name":"Morimoto Asia","cuisine":"Asian","city":"Orlando","state":"Florida","country":"United States","capacity":100},
-
   {"name":"White Dog Cafe","cuisine":"American","city":"Philadelphia","state":"Pennsylvania","country":"United States","capacity":100},
   {"name":"Estia Taverna","cuisine":"Greek","city":"Philadelphia","state":"Pennsylvania","country":"United States","capacity":100},
   {"name":"Savona","cuisine":"Italian","city":"Philadelphia","state":"Pennsylvania","country":"United States","capacity":100},
@@ -163,7 +147,6 @@
   {"name":"YangMing","cuisine":"Chinese","city":"Philadelphia","state":"Pennsylvania","country":"United States","capacity":100},
   {"name":"Southern Cross Kitchen","cuisine":"Southern","city":"Philadelphia","state":"Pennsylvania","country":"United States","capacity":100},
   {"name":"Cerdo","cuisine":"Mediterranean","city":"Philadelphia","state":"Pennsylvania","country":"United States","capacity":100},
-
   {"name":"Chart House Restaurant","cuisine":"Seafood","city":"Portland","state":"Oregon","country":"United States","capacity":100},
   {"name":"a Cena Ristorante","cuisine":"Italian","city":"Portland","state":"Oregon","country":"United States","capacity":100},
   {"name":"Andina","cuisine":"Peruvian","city":"Portland","state":"Oregon","country":"United States","capacity":100},
@@ -174,7 +157,6 @@
   {"name":"LeChon","cuisine":"Southern","city":"Portland","state":"Oregon","country":"United States","capacity":100},
   {"name":"Jake's Famous Crawfish","cuisine":"Seafood","city":"Portland","state":"Oregon","country":"United States","capacity":100},
   {"name":"Irving St Kitchen","cuisine":"Steak","city":"Portland","state":"Oregon","country":"United States","capacity":100},
-
   {"name":"Stella's","cuisine":"Greek","city":"Richmond","state":"Virginia","country":"United States","capacity":100},
   {"name":"Lemaire at The Jefferson Hotel","cuisine":"American","city":"Richmond","state":"Virginia","country":"United States","capacity":100},
   {"name":"Maple and Pine","cuisine":"American","city":"Richmond","state":"Virginia","country":"United States","capacity":100},
@@ -185,7 +167,6 @@
   {"name":"Casa del Barco","cuisine":"Mexican","city":"Richmond","state":"Virginia","country":"United States","capacity":100},
   {"name":"The Hard Shell","cuisine":"Seafood","city":"Richmond","state":"Virginia","country":"United States","capacity":100},
   {"name":"MOSAIC Restaurant","cuisine":"American","city":"Richmond","state":"Virginia","country":"United States","capacity":100},
-
   {"name":"AHouse of Prime Rib","cuisine":"Steak","city":"San Francisco","state":"California","country":"United States","capacity":100},
   {"name":"Jardiniere","cuisine":"French","city":"San Francisco","state":"California","country":"United States","capacity":100},
   {"name":"Absinthe Brasserie and Bar","cuisine":"French","city":"San Francisco","state":"California","country":"United States","capacity":100},
@@ -196,7 +177,6 @@
   {"name":"Scala's Bistro","cuisine":"Italian","city":"San Francisco","state":"California","country":"United States","capacity":100},
   {"name":"John's Grill","cuisine":"American","city":"San Francisco","state":"California","country":"United States","capacity":100},
   {"name":"Le Colonial","cuisine":"Vietnamese","city":"San Francisco","state":"California","country":"United States","capacity":100},
-
   {"name":"Spinasse","cuisine":"Italian","city":"Seattle","state":"Washington","country":"United States","capacity":100},
   {"name":"Momiji Restaurant","cuisine":"Japanese","city":"Seattle","state":"Washington","country":"United States","capacity":100},
   {"name":"Loulay","cuisine":"French","city":"Seattle","state":"Washington","country":"United States","capacity":100},
@@ -207,7 +187,6 @@
   {"name":"Lola","cuisine":"Mediterranean","city":"Seattle","state":"Washington","country":"United States","capacity":100},
   {"name":"Wild Ginger","cuisine":"Asian","city":"Seattle","state":"Washington","country":"United States","capacity":100},
   {"name":"Dahlia Lounge","cuisine":"American","city":"Seattle","state":"Washington","country":"United States","capacity":100},
-
   {"name":"Bellissimo Restaurant","cuisine":"Italian","city":"Washington DC","state":"District of Columbia","country":"United States","capacity":100},
   {"name":"Jaipur Royal Indian Cuisine","cuisine":"Indian","city":"Washington DC","state":"District of Columbia","country":"United States","capacity":100},
   {"name":"2941 Restaurant","cuisine":"American","city":"Washington DC","state":"District of Columbia","country":"United States","capacity":100},
@@ -217,6 +196,4 @@
   {"name":"Ambar","cuisine":"Tapas","city":"Washington DC","state":"District of Columbia","country":"United States","capacity":100},
   {"name":"Cafe Renaissance","cuisine":"French","city":"Washington DC","state":"District of Columbia","country":"United States","capacity":100},
   {"name":"J. Gilbert's - Wood Fired Steaks & Seafood","cuisine":"Steak","city":"Washington DC","state":"District of Columbia","country":"United States","capacity":100},
-  {"name":"TenPenh","cuisine":"Asian","city":"Washington DC","state":"District of Columbia","country":"United States","capacity":100},
-
-]
+  {"name":"TenPenh","cuisine":"Asian","city":"Washington DC","state":"District of Columbia","country":"United States","capacity":100}]
