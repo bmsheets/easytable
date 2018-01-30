@@ -36,25 +36,25 @@ class FeaturedAreas extends React.Component {
           <div className="location-col">
             <ul>
               <li onClick={() => this.search("Atlanta")}><a>Atlanta</a></li>
+              <li onClick={() => this.search("Boston")}><a>Boston</a></li>
               <li onClick={() => this.search("Chicago")}><a>Chicago</a></li>
               <li onClick={() => this.search("Dallas")}><a>Dallas</a></li>
               <li onClick={() => this.search("Denver")}><a>Denver</a></li>
-              <li onClick={() => this.search("Detroit")}><a>Detroit</a></li>
             </ul>
           </div>
           <div className="location-col">
             <ul>
+              <li onClick={() => this.search("Detroit")}><a>Detroit</a></li>
               <li onClick={() => this.search("Houston")}><a>Houston</a></li>
               <li onClick={() => this.search("Indiana")}><a>Indiana</a></li>
               <li onClick={() => this.search("Las Vegas")}><a>Las Vegas</a></li>
               <li onClick={() => this.search("Los Angeles")}><a>Los Angeles</a></li>
-              <li onClick={() => this.search("Miami")}><a>Miami</a></li>
             </ul>
           </div>
           <div className="location-col">
             <ul>
+              <li onClick={() => this.search("Miami")}><a>Miami</a></li>
               <li onClick={() => this.search("Milwaukee")}><a>Milwaukee</a></li>
-              <li onClick={() => this.search("New England")}><a>New England</a></li>
               <li onClick={() => this.search("New York")}><a>New York</a></li>
               <li onClick={() => this.search("Orlando")}><a>Orlando</a></li>
               <li onClick={() => this.search("Philadelpiha")}><a>Philadelphia</a></li>

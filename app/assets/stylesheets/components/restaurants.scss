@@ -1,10 +1,12 @@
 .restaurant-index {
-  background-color: white;
 }
 
 .restaurant-index-list {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
   max-width: 760px;
   margin: auto;
+  padding-left: 20px;
 }
 
 .restaurant-index-item {
