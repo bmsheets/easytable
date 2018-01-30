@@ -1,0 +1,40 @@
+.featured-areas {
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-left: 40px;
+  width: 1208px;
+}
+
+.featured-areas h3 {
+  color: #333;
+  font-weight: 400;
+  font-family: $font-stack;
+  font-size: 1.5rem;
+  line-height: 1.165;
+  margin: 0;
+  padding: 24px;
+}
+
+.location-boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.location-boxes div {
+  width: 33.33%;
+  height: 190px;
+}
+
+$location-images: $location-img-1 $location-img-2 $location-img-3
+  $location-img-4 $location-img-5 $location-img-6;
+
+@for $i from 1 through 6 {
+  .location-box-#{$i} {
+    background-image: url(nth($location-images, $i));
+  }
+}
+
+.location-links {
+  display: flex;
+}
