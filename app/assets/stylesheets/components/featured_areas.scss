@@ -1,8 +1,8 @@
 .featured-areas {
   background-color: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
   border-radius: 5px;
-  margin-left: 40px;
+  margin-left: 36px;
   width: 1208px;
 }
 
@@ -37,4 +37,13 @@ $location-images: $location-img-1 $location-img-2 $location-img-3
 
 .location-links {
   display: flex;
+  padding: 30px 24px;
+}
+
+.location-col {
+  width: 25%;
+}
+
+.location-col li {
+  padding: 8px 0px;
 }
