@@ -35,38 +35,38 @@ class FeaturedAreas extends React.Component {
         <div className="location-links">
           <div className="location-col">
             <ul>
-              <li>Atlanta</li>
-              <li>Chicago</li>
-              <li>Dallas</li>
-              <li>Denver</li>
-              <li>Detroit</li>
+              <li onClick={() => this.search("Atlanta")}><a>Atlanta</a></li>
+              <li onClick={() => this.search("Chicago")}><a>Chicago</a></li>
+              <li onClick={() => this.search("Dallas")}><a>Dallas</a></li>
+              <li onClick={() => this.search("Denver")}><a>Denver</a></li>
+              <li onClick={() => this.search("Detroit")}><a>Detroit</a></li>
             </ul>
           </div>
           <div className="location-col">
             <ul>
-              <li>Houston</li>
-              <li>Indiana</li>
-              <li>Las Vegas</li>
-              <li>Los Angeles</li>
-              <li>Miami</li>
+              <li onClick={() => this.search("Houston")}><a>Houston</a></li>
+              <li onClick={() => this.search("Indiana")}><a>Indiana</a></li>
+              <li onClick={() => this.search("Las Vegas")}><a>Las Vegas</a></li>
+              <li onClick={() => this.search("Los Angeles")}><a>Los Angeles</a></li>
+              <li onClick={() => this.search("Miami")}><a>Miami</a></li>
             </ul>
           </div>
           <div className="location-col">
             <ul>
-              <li>Milwaukee</li>
-              <li>New England</li>
-              <li>New York</li>
-              <li>Orlando</li>
-              <li>Philadelphia</li>
+              <li onClick={() => this.search("Milwaukee")}><a>Milwaukee</a></li>
+              <li onClick={() => this.search("New England")}><a>New England</a></li>
+              <li onClick={() => this.search("New York")}><a>New York</a></li>
+              <li onClick={() => this.search("Orlando")}><a>Orlando</a></li>
+              <li onClick={() => this.search("Philadelpiha")}><a>Philadelphia</a></li>
             </ul>
           </div>
           <div className="location-col">
             <ul>
-              <li>Portland</li>
-              <li>Richmond</li>
-              <li>San Francisco</li>
-              <li>Seattle</li>
-              <li>Washington DC</li>
+              <li onClick={() => this.search("Portland")}><a>Portland</a></li>
+              <li onClick={() => this.search("Richmond")}><a>Richmond</a></li>
+              <li onClick={() => this.search("San Francisco")}><a>San Francisco</a></li>
+              <li onClick={() => this.search("Seattle")}><a>Seattle</a></li>
+              <li onClick={() => this.search("Washington DC")}><a>Washington DC</a></li>
             </ul>
           </div>
         </div>

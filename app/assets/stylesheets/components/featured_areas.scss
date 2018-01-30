@@ -74,4 +74,15 @@ $location-images: $location-img-1 $location-img-2 $location-img-3
 
 .location-col li {
   padding: 8px 0px;
+  display: block;
+}
+
+.location-col li a {
+  color: $blue;
+  cursor: pointer;
+  width: auto;
+}
+
+.location-col li a:hover {
+  color: $blue-hover;
 }
