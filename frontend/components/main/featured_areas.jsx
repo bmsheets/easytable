@@ -57,7 +57,7 @@ class FeaturedAreas extends React.Component {
               <li onClick={() => this.search("Milwaukee")}><a>Milwaukee</a></li>
               <li onClick={() => this.search("New York")}><a>New York</a></li>
               <li onClick={() => this.search("Orlando")}><a>Orlando</a></li>
-              <li onClick={() => this.search("Philadelpiha")}><a>Philadelphia</a></li>
+              <li onClick={() => this.search("Philadelphia")}><a>Philadelphia</a></li>
             </ul>
           </div>
           <div className="location-col">
