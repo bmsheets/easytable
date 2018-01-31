@@ -3,7 +3,7 @@
 }
 
 .nav-bar {
-  
+
 }
 
 .utility-bar {
@@ -19,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  height: 54px; 
+  height: 54px;
   padding: 0 36px;
 }
 
@@ -99,4 +99,5 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
 }
